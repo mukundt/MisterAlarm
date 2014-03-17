@@ -1,6 +1,4 @@
-MisterAlarm 
+MisterAlarm
 ===========
 
-HackPrinceton 2014 Project
-
-We have a name!?
+HackPrinceton 2014 Project - The Countable Irrationals + Bob (we need a better group name...)
