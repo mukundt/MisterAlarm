@@ -90,6 +90,7 @@ GTMOAuth2Authentication *auth;
     [[self navigationController] pushViewController:viewController animated:YES];
 }
 
+
 - (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
       finishedWithAuth:(GTMOAuth2Authentication *)Auth
                  error:(NSError *)error {
