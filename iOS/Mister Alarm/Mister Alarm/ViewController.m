@@ -22,11 +22,9 @@
     bleShield = [[BLE alloc] init];
     [bleShield controlSetup];
     bleShield.delegate = self;
-    
-    [self BLEShieldScan];
 }
 
-- (void)BLEShieldScan
+- (IBAction)BLEShieldScan:(id)sender
 {
     if (bleShield.activePeripheral)
         if(bleShield.activePeripheral.state == CBPeripheralStateConnected)

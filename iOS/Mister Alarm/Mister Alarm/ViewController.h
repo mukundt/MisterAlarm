@@ -13,4 +13,6 @@
     BLE *bleShield;
 }
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonConnect;
+
 @end
