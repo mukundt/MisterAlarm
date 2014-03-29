@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		618C05BB18E7563600F1CF5C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 618C05BA18E7563600F1CF5C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		94741CE418E6CEBA00753422 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94741CE318E6CEBA00753422 /* GTMOAuth2ViewTouch.xib */; };
 		94A6A91718E6B7CA0099B093 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6A91618E6B7CA0099B093 /* Foundation.framework */; };
 		94A6A91918E6B7CA0099B093 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6A91818E6B7CA0099B093 /* CoreGraphics.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		618C05B918E7563600F1CF5C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		618C05BA18E7563600F1CF5C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		94741CDF18E6CC2D00753422 /* GTMHTTPFetcherLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMHTTPFetcherLogging.h; path = "../../google-api-objectivec-client-read-only/Source/HTTPFetcher/GTMHTTPFetcherLogging.h"; sourceTree = "<group>"; };
 		94741CE018E6CCE000753422 /* GTMOAuth2WindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2WindowController.h; path = "../../google-api-objectivec-client-read-only/Source/OAuth2/Mac/GTMOAuth2WindowController.h"; sourceTree = "<group>"; };
 		94741CE118E6CD1500753422 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2Authentication.h; path = "../../google-api-objectivec-client-read-only/Source/OAuth2/GTMOAuth2Authentication.h"; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 		94A6A91D18E6B7CA0099B093 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				618C05B918E7563600F1CF5C /* JSONKit.h */,
+				618C05BA18E7563600F1CF5C /* JSONKit.m */,
 				94741CE018E6CCE000753422 /* GTMOAuth2WindowController.h */,
 				94741CE218E6CEBA00753422 /* GTMOAuth2ViewControllerTouch.h */,
 				94741CE318E6CEBA00753422 /* GTMOAuth2ViewTouch.xib */,
@@ -317,6 +322,7 @@
 				94A6A92718E6B7CA0099B093 /* AppDelegate.m in Sources */,
 				94A6A92318E6B7CA0099B093 /* main.m in Sources */,
 				94A6A96018E6BA510099B093 /* GTLCalendar_Sources.m in Sources */,
+				618C05BB18E7563600F1CF5C /* JSONKit.m in Sources */,
 				94A6A95D18E6BA450099B093 /* GTLNetworking_Sources.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
