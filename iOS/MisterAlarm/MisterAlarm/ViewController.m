@@ -55,6 +55,7 @@ int sensorCount = 0;
 - (void) restart:(id) sender
 {
     unsigned char toSend = 'C';
+    NSLog(@"C");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
     [self.Audio play];
@@ -65,6 +66,7 @@ int sensorCount = 0;
     
     if (sensorCount == 0){
         unsigned char toSend = 'B';
+        NSLog(@"B");
         NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
         [bleShield write:data];
         [self.Audio pause];
@@ -98,6 +100,7 @@ int sensorCount = 0;
         [audioPlayer play];
         //Horn
         unsigned char toSend = 'H';
+        NSLog(@"H");
         NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
         [bleShield write:data];
         sensorCount = 0;
@@ -144,6 +147,7 @@ int sensorCount = 0;
 {
     //Lamp
     unsigned char toSend = 'O';
+    NSLog(@"O");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
 
@@ -152,6 +156,7 @@ int sensorCount = 0;
 - (void) lampFlicker:(id)sender
 {
     unsigned char toSend = 'L';
+    NSLog(@"L");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
 }
@@ -160,6 +165,7 @@ int sensorCount = 0;
 {
     //Lamp
     unsigned char toSend = 'S';
+    NSLog(@"S");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
 }
