@@ -13,10 +13,10 @@
 #define PIN_HORN 7
 
 // DURATIONS
-#define LAMP_ON_TIME 10000  // milliseconds
-#define MIST_ON_TIME 500   // milliseconds
+#define LAMP_ON_TIME 500  // milliseconds
+#define MIST_ON_TIME 800   // milliseconds
 #define HORN_ON_TIME 1000   // milliseconds
-#define SONAR_CHECK_INTERVAL 50 // milliseconds
+#define SONAR_CHECK_INTERVAL 350 // milliseconds - DON'T POLL TOO MUCH---MESSES UP TIMING BIG TIME
 #define SONAR_DOWN_TIME 2000 // milliseconds
 
 // SERVO PARAMETERS
@@ -28,10 +28,18 @@ unsigned long lamp_start_time = 0;
 unsigned long mist_start_time = 0;
 unsigned long horn_start_time = 0;
 
+unsigned long lamp_end_time = 0;
+unsigned long mist_end_time = 0;
+
 // FLAGS
 boolean lamp_on = false;
 boolean mist_on = false;
 boolean horn_on = false;
+
+// COUNTS
+
+int lamp_count = 0;
+int mist_count = 0;
 
 // SERVO
 Servo mist_servo;
@@ -55,11 +63,11 @@ void setup() {
 void loop()
 {
   process_bluetooth_buffer();
+  ble_do_events();
   lamp_do_events();
   mist_do_events();
   horn_do_events();
   check_sonar();
-  ble_do_events();
 }
 
 // reads all bytes in the serial input buffer, sets flags and timers accordingly
@@ -72,10 +80,12 @@ void process_bluetooth_buffer()
     {
       case 'L': // lamp
         lamp_on = true;
+        lamp_count = 5;
         lamp_start_time = millis();
         break;
       case 'S': // spray
         mist_on = true;
+        mist_count = 5;
         mist_start_time = millis();
         break;
       case 'H': // horn
@@ -96,9 +106,9 @@ void check_sonar()
     // send a pulse
     pinMode(PIN_SONAR, OUTPUT);
     digitalWrite(PIN_SONAR, LOW);
-    delayMicroseconds(2);
+    delayMicroseconds(1);
     digitalWrite(PIN_SONAR, HIGH);
-    delayMicroseconds(5);
+    delayMicroseconds(3);
     digitalWrite(PIN_SONAR, LOW);
     
     // read the output pulse
@@ -116,7 +126,7 @@ void check_sonar()
       hand_detected = false;
     }
     if (hand_detected && !prev_hand_detected){
-      ble_write('S'); // snoz
+      ble_write('W'); // wave
     }
   }
 }
@@ -124,19 +134,47 @@ void check_sonar()
 // reads flag and timer, turns lamp on/off accordingly
 void lamp_do_events()
 {
-  if (!lamp_on) return;
-  if (millis() - lamp_start_time < LAMP_ON_TIME) {
-    digitalWrite(PIN_LAMP, HIGH);
-  } else {
-    digitalWrite(PIN_LAMP, LOW);
-    lamp_on = false;
+  if (!lamp_on && lamp_count == 0) return;
+  
+  else if (!lamp_on && lamp_count > 0)
+  {
+    if (millis() - lamp_end_time > LAMP_ON_TIME)
+    {
+      lamp_on = true;
+      lamp_count--;
+      lamp_start_time = millis();
+    }
   }
-}
+  
+  else
+  { 
+    if (millis() - lamp_start_time < LAMP_ON_TIME) {
+      digitalWrite(PIN_LAMP, HIGH);
+    } else {
+      digitalWrite(PIN_LAMP, LOW);
+      lamp_on = false;
+      lamp_end_time = millis();
+    }
+  }
+  
+ }
+
   
 // reads flag and timer, moves the mister sevo accordingly
 void mist_do_events()
 {
-  if (!mist_on) return;
+  if (!mist_on && mist_count == 0) return;
+  
+  else if (!mist_on && mist_count > 0)
+  {
+     if (millis() - mist_end_time > MIST_ON_TIME)
+    {
+      mist_on = true;
+      mist_count--;
+      mist_start_time = millis();
+    }
+  }
+  
   if (millis() - mist_start_time < MIST_ON_TIME) {
     float proportion = float(millis() - mist_start_time) / float(MIST_ON_TIME); // 0.0 to 1.0
     float range_motion = float(SERVO_RELEASED_POSITION - SERVO_SQUEEZED_POSITION);
