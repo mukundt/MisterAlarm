@@ -21,6 +21,116 @@
 		61583D3518E6667200234E27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61583D1718E6667200234E27 /* UIKit.framework */; };
 		61583D3D18E6667200234E27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61583D3B18E6667200234E27 /* InfoPlist.strings */; };
 		61583D3F18E6667200234E27 /* Mister_AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D3E18E6667200234E27 /* Mister_AlarmTests.m */; };
+		61583E1A18E669E100234E27 /* CloudAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D4B18E669E000234E27 /* CloudAuthenticator.m */; };
+		61583E1B18E669E100234E27 /* CloudControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D4F18E669E000234E27 /* CloudControllerHelper.m */; };
+		61583E1C18E669E100234E27 /* CloudEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D5118E669E000234E27 /* CloudEntity.m */; };
+		61583E1D18E669E100234E27 /* CloudEntityCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D5418E669E000234E27 /* CloudEntityCollection.m */; };
+		61583E1E18E669E100234E27 /* CloudFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D5618E669E000234E27 /* CloudFilter.m */; };
+		61583E1F18E669E100234E27 /* CloudMessagingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D5818E669E000234E27 /* CloudMessagingManager.m */; };
+		61583E2018E669E100234E27 /* CloudNotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D5A18E669E000234E27 /* CloudNotificationHandler.m */; };
+		61583E2118E669E100234E27 /* GTLMobilebackendQueryDto+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D5C18E669E000234E27 /* GTLMobilebackendQueryDto+Helper.m */; };
+		61583E2218E669E100234E27 /* CloudAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D6018E669E000234E27 /* CloudAuthenticator.m */; };
+		61583E2318E669E100234E27 /* CloudControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D6418E669E000234E27 /* CloudControllerHelper.m */; };
+		61583E2418E669E100234E27 /* CloudEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D6618E669E000234E27 /* CloudEntity.m */; };
+		61583E2518E669E100234E27 /* CloudEntityCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D6918E669E000234E27 /* CloudEntityCollection.m */; };
+		61583E2618E669E100234E27 /* CloudFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D6B18E669E000234E27 /* CloudFilter.m */; };
+		61583E2718E669E100234E27 /* CloudMessagingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D6D18E669E000234E27 /* CloudMessagingManager.m */; };
+		61583E2818E669E100234E27 /* CloudNotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D6F18E669E000234E27 /* CloudNotificationHandler.m */; };
+		61583E2918E669E100234E27 /* GTLMobilebackendQueryDto+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D7118E669E000234E27 /* GTLMobilebackendQueryDto+Helper.m */; };
+		61583E2A18E669E100234E27 /* ic_launcher_guestbook.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7318E669E000234E27 /* ic_launcher_guestbook.png */; };
+		61583E2B18E669E100234E27 /* ic_left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7418E669E000234E27 /* ic_left_arrow.png */; };
+		61583E2C18E669E100234E27 /* ic_menu_guestbook.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7518E669E000234E27 /* ic_menu_guestbook.png */; };
+		61583E2D18E669E100234E27 /* ic_right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7618E669E000234E27 /* ic_right_arrow.png */; };
+		61583E2E18E669E100234E27 /* ic_send.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7718E669E000234E27 /* ic_send.png */; };
+		61583E2F18E669E100234E27 /* img_connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7818E669E000234E27 /* img_connect.png */; };
+		61583E3018E669E100234E27 /* img_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7918E669E000234E27 /* img_done.png */; };
+		61583E3118E669E100234E27 /* img_dots_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7A18E669E000234E27 /* img_dots_1.png */; };
+		61583E3218E669E100234E27 /* img_dots_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7B18E669E000234E27 /* img_dots_2.png */; };
+		61583E3318E669E100234E27 /* img_dots_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7C18E669E000234E27 /* img_dots_3.png */; };
+		61583E3418E669E100234E27 /* img_guestbook_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7D18E669E000234E27 /* img_guestbook_splash.png */; };
+		61583E3518E669E100234E27 /* img_logo_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D7E18E669E000234E27 /* img_logo_splash.png */; };
+		61583E3618E669E100234E27 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8218E669E000234E27 /* Default-568h@2x.png */; };
+		61583E3718E669E100234E27 /* ic_launcher_guestbook.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8318E669E000234E27 /* ic_launcher_guestbook.png */; };
+		61583E3818E669E100234E27 /* ic_left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8418E669E000234E27 /* ic_left_arrow.png */; };
+		61583E3918E669E100234E27 /* ic_menu_guestbook.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8518E669E000234E27 /* ic_menu_guestbook.png */; };
+		61583E3A18E669E100234E27 /* ic_right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8618E669E000234E27 /* ic_right_arrow.png */; };
+		61583E3B18E669E100234E27 /* ic_send.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8718E669E000234E27 /* ic_send.png */; };
+		61583E3C18E669E100234E27 /* img_connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8818E669E000234E27 /* img_connect.png */; };
+		61583E3D18E669E100234E27 /* img_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8918E669E000234E27 /* img_done.png */; };
+		61583E3E18E669E100234E27 /* img_dots_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8A18E669E000234E27 /* img_dots_1.png */; };
+		61583E3F18E669E100234E27 /* img_dots_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8B18E669E000234E27 /* img_dots_2.png */; };
+		61583E4018E669E100234E27 /* img_dots_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8C18E669E000234E27 /* img_dots_3.png */; };
+		61583E4118E669E100234E27 /* img_guestbook_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8D18E669E000234E27 /* img_guestbook_splash.png */; };
+		61583E4218E669E100234E27 /* img_logo_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8E18E669E000234E27 /* img_logo_splash.png */; };
+		61583E4318E669E100234E27 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 61583D8F18E669E000234E27 /* LICENSE */; };
+		61583E4418E669E100234E27 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 61583D9018E669E000234E27 /* README.md */; };
+		61583E4518E669E100234E27 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D9318E669E000234E27 /* Constants.m */; };
+		61583E4618E669E100234E27 /* EditModeUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D9518E669E000234E27 /* EditModeUITextView.m */; };
+		61583E4718E669E100234E27 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61583D9618E669E000234E27 /* iphone.storyboard */; };
+		61583E4818E669E100234E27 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583D9818E669E000234E27 /* icon.png */; };
+		61583E4918E669E100234E27 /* MessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D9A18E669E000234E27 /* MessagesTableViewController.m */; };
+		61583E4A18E669E100234E27 /* Splash1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D9C18E669E000234E27 /* Splash1ViewController.m */; };
+		61583E4B18E669E100234E27 /* Splash2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D9E18E669E000234E27 /* Splash2ViewController.m */; };
+		61583E4C18E669E100234E27 /* Splash3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DA018E669E000234E27 /* Splash3ViewController.m */; };
+		61583E4D18E669E100234E27 /* CloudBackendIOSClient-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61583DA218E669E000234E27 /* CloudBackendIOSClient-Info.plist */; };
+		61583E4E18E669E100234E27 /* CloudBackendIOSClientAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DA518E669E000234E27 /* CloudBackendIOSClientAppDelegate.m */; };
+		61583E4F18E669E100234E27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DA618E669E000234E27 /* main.m */; };
+		61583E5018E669E100234E27 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583DAA18E669E000234E27 /* Default-568h@2x.png */; };
+		61583E5118E669E100234E27 /* GTLMobilebackend_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DAD18E669E000234E27 /* GTLMobilebackend_Sources.m */; };
+		61583E5218E669E100234E27 /* GTLMobilebackendBlobAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DAF18E669E000234E27 /* GTLMobilebackendBlobAccess.m */; };
+		61583E5318E669E100234E27 /* GTLMobilebackendConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DB118E669E000234E27 /* GTLMobilebackendConstants.m */; };
+		61583E5418E669E100234E27 /* GTLMobilebackendEntityDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DB318E669E000234E27 /* GTLMobilebackendEntityDto.m */; };
+		61583E5518E669E100234E27 /* GTLMobilebackendEntityListDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DB518E669E000234E27 /* GTLMobilebackendEntityListDto.m */; };
+		61583E5618E669E100234E27 /* GTLMobilebackendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DB718E669E000234E27 /* GTLMobilebackendFilter.m */; };
+		61583E5718E669E100234E27 /* GTLMobilebackendFilterDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DB918E669E000234E27 /* GTLMobilebackendFilterDto.m */; };
+		61583E5818E669E100234E27 /* GTLMobilebackendQueryDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DBB18E669E000234E27 /* GTLMobilebackendQueryDto.m */; };
+		61583E5918E669E100234E27 /* GTLQueryMobilebackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DBD18E669E000234E27 /* GTLQueryMobilebackend.m */; };
+		61583E5A18E669E100234E27 /* GTLServiceMobilebackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DBF18E669E000234E27 /* GTLServiceMobilebackend.m */; };
+		61583E5B18E669E100234E27 /* GTLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DC218E669E000234E27 /* GTLBase64.m */; };
+		61583E5C18E669E100234E27 /* GTLBatchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DC418E669E000234E27 /* GTLBatchQuery.m */; };
+		61583E5D18E669E100234E27 /* GTLBatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DC618E669E000234E27 /* GTLBatchResult.m */; };
+		61583E5E18E669E100234E27 /* GTLDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DC818E669E000234E27 /* GTLDateTime.m */; };
+		61583E5F18E669E100234E27 /* GTLErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DCB18E669E000234E27 /* GTLErrorObject.m */; };
+		61583E6018E669E100234E27 /* GTLFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DCD18E669E000234E27 /* GTLFramework.m */; };
+		61583E6118E669E100234E27 /* GTLJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DCF18E669E000234E27 /* GTLJSONParser.m */; };
+		61583E6218E669E100234E27 /* GTLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DD118E669E000234E27 /* GTLObject.m */; };
+		61583E6318E669E100234E27 /* GTLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DD318E669E000234E27 /* GTLQuery.m */; };
+		61583E6418E669E100234E27 /* GTLRuntimeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DD518E669E000234E27 /* GTLRuntimeCommon.m */; };
+		61583E6518E669E100234E27 /* GTLService.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DD718E669E000234E27 /* GTLService.m */; };
+		61583E6618E669E100234E27 /* GTLUploadParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DDA18E669E000234E27 /* GTLUploadParameters.m */; };
+		61583E6718E669E100234E27 /* GTLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DDC18E669E000234E27 /* GTLUtilities.m */; };
+		61583E6818E669E100234E27 /* GTMGatherInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DDE18E669E000234E27 /* GTMGatherInputStream.m */; };
+		61583E6918E669E100234E27 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DE018E669E000234E27 /* GTMHTTPFetcher.m */; };
+		61583E6A18E669E100234E27 /* GTMHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DE218E669E000234E27 /* GTMHTTPFetcherLogging.m */; };
+		61583E6B18E669E100234E27 /* GTMHTTPFetcherLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DE418E669E000234E27 /* GTMHTTPFetcherLogViewController.m */; };
+		61583E6C18E669E100234E27 /* GTMHTTPFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DE618E669E000234E27 /* GTMHTTPFetcherService.m */; };
+		61583E6D18E669E100234E27 /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DE818E669E000234E27 /* GTMHTTPFetchHistory.m */; };
+		61583E6E18E669E100234E27 /* GTMHTTPUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DEA18E669E000234E27 /* GTMHTTPUploadFetcher.m */; };
+		61583E6F18E669E100234E27 /* GTMMIMEDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DEC18E669E000234E27 /* GTMMIMEDocument.m */; };
+		61583E7018E669E100234E27 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DEE18E669E000234E27 /* GTMOAuth2Authentication.m */; };
+		61583E7118E669E100234E27 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DF018E669E000234E27 /* GTMOAuth2SignIn.m */; };
+		61583E7218E669E100234E27 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DF218E669E000234E27 /* GTMOAuth2ViewControllerTouch.m */; };
+		61583E7318E669E100234E27 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61583DF318E669E000234E27 /* GTMOAuth2ViewTouch.xib */; };
+		61583E7418E669E100234E27 /* GTMReadMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DF518E669E000234E27 /* GTMReadMonitorInputStream.m */; };
+		61583E7518E669E100234E27 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 61583DF618E669E000234E27 /* LICENSE */; };
+		61583E7618E669E100234E27 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 61583DF718E669E000234E27 /* README.md */; };
+		61583E7718E669E100234E27 /* CloudMessageProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DFA18E669E100234E27 /* CloudMessageProperties.m */; };
+		61583E7818E669E100234E27 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DFC18E669E100234E27 /* Constants.m */; };
+		61583E7918E669E100234E27 /* EditModeUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583DFE18E669E100234E27 /* EditModeUITextView.m */; };
+		61583E7A18E669E100234E27 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61583DFF18E669E100234E27 /* iphone.storyboard */; };
+		61583E7B18E669E100234E27 /* GTLMobilebackendCloudMessageEntityDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E0218E669E100234E27 /* GTLMobilebackendCloudMessageEntityDto.m */; };
+		61583E7C18E669E100234E27 /* GTLMobilebackendEntityDto+PropertiesType.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E0418E669E100234E27 /* GTLMobilebackendEntityDto+PropertiesType.m */; };
+		61583E7D18E669E100234E27 /* GTLMobilebackendGuestbookEntityDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E0618E669E100234E27 /* GTLMobilebackendGuestbookEntityDto.m */; };
+		61583E7E18E669E100234E27 /* GuestbookProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E0818E669E100234E27 /* GuestbookProperties.m */; };
+		61583E7F18E669E100234E27 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61583E0918E669E100234E27 /* icon.png */; };
+		61583E8018E669E100234E27 /* MessagesTableViewController+ViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E0B18E669E100234E27 /* MessagesTableViewController+ViewHelper.m */; };
+		61583E8118E669E100234E27 /* MessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E0D18E669E100234E27 /* MessagesTableViewController.m */; };
+		61583E8218E669E100234E27 /* Splash1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E0F18E669E100234E27 /* Splash1ViewController.m */; };
+		61583E8318E669E100234E27 /* Splash2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E1118E669E100234E27 /* Splash2ViewController.m */; };
+		61583E8418E669E100234E27 /* Splash3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E1318E669E100234E27 /* Splash3ViewController.m */; };
+		61583E8518E669E100234E27 /* CloudBackendIOSClient-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61583E1518E669E100234E27 /* CloudBackendIOSClient-Info.plist */; };
+		61583E8618E669E100234E27 /* CloudBackendIOSClientAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E1818E669E100234E27 /* CloudBackendIOSClientAppDelegate.m */; };
+		61583E8718E669E100234E27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583E1918E669E100234E27 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +140,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 61583D0F18E6667100234E27;
 			remoteInfo = "Mister Alarm";
+		};
+		61583E8918E669E100234E27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61583DA718E669E000234E27 /* CloudBackendIOSClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F72EB9616CB288F00C29E08;
+			remoteInfo = CloudBackendIOSClient;
+		};
+		61583E8C18E669E100234E27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61583D7F18E669E000234E27 /* CloudBackendIOSClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F72EB9616CB288F00C29E08;
+			remoteInfo = CloudBackendIOSClient;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +177,199 @@
 		61583D3A18E6667200234E27 /* Mister AlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mister AlarmTests-Info.plist"; sourceTree = "<group>"; };
 		61583D3C18E6667200234E27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61583D3E18E6667200234E27 /* Mister_AlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mister_AlarmTests.m; sourceTree = "<group>"; };
+		61583D4A18E669E000234E27 /* CloudAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudAuthenticator.h; sourceTree = "<group>"; };
+		61583D4B18E669E000234E27 /* CloudAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudAuthenticator.m; sourceTree = "<group>"; };
+		61583D4C18E669E000234E27 /* CloudAuthenticatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudAuthenticatorDelegate.h; sourceTree = "<group>"; };
+		61583D4D18E669E000234E27 /* CloudControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudControllerDelegate.h; sourceTree = "<group>"; };
+		61583D4E18E669E000234E27 /* CloudControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudControllerHelper.h; sourceTree = "<group>"; };
+		61583D4F18E669E000234E27 /* CloudControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudControllerHelper.m; sourceTree = "<group>"; };
+		61583D5018E669E000234E27 /* CloudEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntity.h; sourceTree = "<group>"; };
+		61583D5118E669E000234E27 /* CloudEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudEntity.m; sourceTree = "<group>"; };
+		61583D5218E669E000234E27 /* CloudEntityActionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntityActionDelegate.h; sourceTree = "<group>"; };
+		61583D5318E669E000234E27 /* CloudEntityCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntityCollection.h; sourceTree = "<group>"; };
+		61583D5418E669E000234E27 /* CloudEntityCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudEntityCollection.m; sourceTree = "<group>"; };
+		61583D5518E669E000234E27 /* CloudFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudFilter.h; sourceTree = "<group>"; };
+		61583D5618E669E000234E27 /* CloudFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudFilter.m; sourceTree = "<group>"; };
+		61583D5718E669E000234E27 /* CloudMessagingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudMessagingManager.h; sourceTree = "<group>"; };
+		61583D5818E669E000234E27 /* CloudMessagingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudMessagingManager.m; sourceTree = "<group>"; };
+		61583D5918E669E000234E27 /* CloudNotificationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudNotificationHandler.h; sourceTree = "<group>"; };
+		61583D5A18E669E000234E27 /* CloudNotificationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudNotificationHandler.m; sourceTree = "<group>"; };
+		61583D5B18E669E000234E27 /* GTLMobilebackendQueryDto+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTLMobilebackendQueryDto+Helper.h"; sourceTree = "<group>"; };
+		61583D5C18E669E000234E27 /* GTLMobilebackendQueryDto+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTLMobilebackendQueryDto+Helper.m"; sourceTree = "<group>"; };
+		61583D5F18E669E000234E27 /* CloudAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudAuthenticator.h; sourceTree = "<group>"; };
+		61583D6018E669E000234E27 /* CloudAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudAuthenticator.m; sourceTree = "<group>"; };
+		61583D6118E669E000234E27 /* CloudAuthenticatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudAuthenticatorDelegate.h; sourceTree = "<group>"; };
+		61583D6218E669E000234E27 /* CloudControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudControllerDelegate.h; sourceTree = "<group>"; };
+		61583D6318E669E000234E27 /* CloudControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudControllerHelper.h; sourceTree = "<group>"; };
+		61583D6418E669E000234E27 /* CloudControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudControllerHelper.m; sourceTree = "<group>"; };
+		61583D6518E669E000234E27 /* CloudEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntity.h; sourceTree = "<group>"; };
+		61583D6618E669E000234E27 /* CloudEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudEntity.m; sourceTree = "<group>"; };
+		61583D6718E669E000234E27 /* CloudEntityActionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntityActionDelegate.h; sourceTree = "<group>"; };
+		61583D6818E669E000234E27 /* CloudEntityCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntityCollection.h; sourceTree = "<group>"; };
+		61583D6918E669E000234E27 /* CloudEntityCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudEntityCollection.m; sourceTree = "<group>"; };
+		61583D6A18E669E000234E27 /* CloudFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudFilter.h; sourceTree = "<group>"; };
+		61583D6B18E669E000234E27 /* CloudFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudFilter.m; sourceTree = "<group>"; };
+		61583D6C18E669E000234E27 /* CloudMessagingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudMessagingManager.h; sourceTree = "<group>"; };
+		61583D6D18E669E000234E27 /* CloudMessagingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudMessagingManager.m; sourceTree = "<group>"; };
+		61583D6E18E669E000234E27 /* CloudNotificationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudNotificationHandler.h; sourceTree = "<group>"; };
+		61583D6F18E669E000234E27 /* CloudNotificationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudNotificationHandler.m; sourceTree = "<group>"; };
+		61583D7018E669E000234E27 /* GTLMobilebackendQueryDto+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTLMobilebackendQueryDto+Helper.h"; sourceTree = "<group>"; };
+		61583D7118E669E000234E27 /* GTLMobilebackendQueryDto+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTLMobilebackendQueryDto+Helper.m"; sourceTree = "<group>"; };
+		61583D7318E669E000234E27 /* ic_launcher_guestbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_guestbook.png; sourceTree = "<group>"; };
+		61583D7418E669E000234E27 /* ic_left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_left_arrow.png; sourceTree = "<group>"; };
+		61583D7518E669E000234E27 /* ic_menu_guestbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_guestbook.png; sourceTree = "<group>"; };
+		61583D7618E669E000234E27 /* ic_right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_right_arrow.png; sourceTree = "<group>"; };
+		61583D7718E669E000234E27 /* ic_send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_send.png; sourceTree = "<group>"; };
+		61583D7818E669E000234E27 /* img_connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_connect.png; sourceTree = "<group>"; };
+		61583D7918E669E000234E27 /* img_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_done.png; sourceTree = "<group>"; };
+		61583D7A18E669E000234E27 /* img_dots_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_dots_1.png; sourceTree = "<group>"; };
+		61583D7B18E669E000234E27 /* img_dots_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_dots_2.png; sourceTree = "<group>"; };
+		61583D7C18E669E000234E27 /* img_dots_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_dots_3.png; sourceTree = "<group>"; };
+		61583D7D18E669E000234E27 /* img_guestbook_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_guestbook_splash.png; sourceTree = "<group>"; };
+		61583D7E18E669E000234E27 /* img_logo_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_logo_splash.png; sourceTree = "<group>"; };
+		61583D7F18E669E000234E27 /* CloudBackendIOSClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CloudBackendIOSClient.xcodeproj; sourceTree = "<group>"; };
+		61583D8218E669E000234E27 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		61583D8318E669E000234E27 /* ic_launcher_guestbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_guestbook.png; sourceTree = "<group>"; };
+		61583D8418E669E000234E27 /* ic_left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_left_arrow.png; sourceTree = "<group>"; };
+		61583D8518E669E000234E27 /* ic_menu_guestbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_guestbook.png; sourceTree = "<group>"; };
+		61583D8618E669E000234E27 /* ic_right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_right_arrow.png; sourceTree = "<group>"; };
+		61583D8718E669E000234E27 /* ic_send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_send.png; sourceTree = "<group>"; };
+		61583D8818E669E000234E27 /* img_connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_connect.png; sourceTree = "<group>"; };
+		61583D8918E669E000234E27 /* img_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_done.png; sourceTree = "<group>"; };
+		61583D8A18E669E000234E27 /* img_dots_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_dots_1.png; sourceTree = "<group>"; };
+		61583D8B18E669E000234E27 /* img_dots_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_dots_2.png; sourceTree = "<group>"; };
+		61583D8C18E669E000234E27 /* img_dots_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_dots_3.png; sourceTree = "<group>"; };
+		61583D8D18E669E000234E27 /* img_guestbook_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_guestbook_splash.png; sourceTree = "<group>"; };
+		61583D8E18E669E000234E27 /* img_logo_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_logo_splash.png; sourceTree = "<group>"; };
+		61583D8F18E669E000234E27 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		61583D9018E669E000234E27 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		61583D9218E669E000234E27 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		61583D9318E669E000234E27 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		61583D9418E669E000234E27 /* EditModeUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditModeUITextView.h; sourceTree = "<group>"; };
+		61583D9518E669E000234E27 /* EditModeUITextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditModeUITextView.m; sourceTree = "<group>"; };
+		61583D9718E669E000234E27 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iphone.storyboard; sourceTree = "<group>"; };
+		61583D9818E669E000234E27 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		61583D9918E669E000234E27 /* MessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableViewController.h; sourceTree = "<group>"; };
+		61583D9A18E669E000234E27 /* MessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableViewController.m; sourceTree = "<group>"; };
+		61583D9B18E669E000234E27 /* Splash1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splash1ViewController.h; sourceTree = "<group>"; };
+		61583D9C18E669E000234E27 /* Splash1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Splash1ViewController.m; sourceTree = "<group>"; };
+		61583D9D18E669E000234E27 /* Splash2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splash2ViewController.h; sourceTree = "<group>"; };
+		61583D9E18E669E000234E27 /* Splash2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Splash2ViewController.m; sourceTree = "<group>"; };
+		61583D9F18E669E000234E27 /* Splash3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splash3ViewController.h; sourceTree = "<group>"; };
+		61583DA018E669E000234E27 /* Splash3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Splash3ViewController.m; sourceTree = "<group>"; };
+		61583DA218E669E000234E27 /* CloudBackendIOSClient-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CloudBackendIOSClient-Info.plist"; sourceTree = "<group>"; };
+		61583DA318E669E000234E27 /* CloudBackendIOSClient-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CloudBackendIOSClient-Prefix.pch"; sourceTree = "<group>"; };
+		61583DA418E669E000234E27 /* CloudBackendIOSClientAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudBackendIOSClientAppDelegate.h; sourceTree = "<group>"; };
+		61583DA518E669E000234E27 /* CloudBackendIOSClientAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudBackendIOSClientAppDelegate.m; sourceTree = "<group>"; };
+		61583DA618E669E000234E27 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61583DA718E669E000234E27 /* CloudBackendIOSClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CloudBackendIOSClient.xcodeproj; sourceTree = "<group>"; };
+		61583DAA18E669E000234E27 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		61583DAC18E669E000234E27 /* GTLMobilebackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackend.h; sourceTree = "<group>"; };
+		61583DAD18E669E000234E27 /* GTLMobilebackend_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackend_Sources.m; sourceTree = "<group>"; };
+		61583DAE18E669E000234E27 /* GTLMobilebackendBlobAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendBlobAccess.h; sourceTree = "<group>"; };
+		61583DAF18E669E000234E27 /* GTLMobilebackendBlobAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendBlobAccess.m; sourceTree = "<group>"; };
+		61583DB018E669E000234E27 /* GTLMobilebackendConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendConstants.h; sourceTree = "<group>"; };
+		61583DB118E669E000234E27 /* GTLMobilebackendConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendConstants.m; sourceTree = "<group>"; };
+		61583DB218E669E000234E27 /* GTLMobilebackendEntityDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendEntityDto.h; sourceTree = "<group>"; };
+		61583DB318E669E000234E27 /* GTLMobilebackendEntityDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendEntityDto.m; sourceTree = "<group>"; };
+		61583DB418E669E000234E27 /* GTLMobilebackendEntityListDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendEntityListDto.h; sourceTree = "<group>"; };
+		61583DB518E669E000234E27 /* GTLMobilebackendEntityListDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendEntityListDto.m; sourceTree = "<group>"; };
+		61583DB618E669E000234E27 /* GTLMobilebackendFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendFilter.h; sourceTree = "<group>"; };
+		61583DB718E669E000234E27 /* GTLMobilebackendFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendFilter.m; sourceTree = "<group>"; };
+		61583DB818E669E000234E27 /* GTLMobilebackendFilterDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendFilterDto.h; sourceTree = "<group>"; };
+		61583DB918E669E000234E27 /* GTLMobilebackendFilterDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendFilterDto.m; sourceTree = "<group>"; };
+		61583DBA18E669E000234E27 /* GTLMobilebackendQueryDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendQueryDto.h; sourceTree = "<group>"; };
+		61583DBB18E669E000234E27 /* GTLMobilebackendQueryDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendQueryDto.m; sourceTree = "<group>"; };
+		61583DBC18E669E000234E27 /* GTLQueryMobilebackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLQueryMobilebackend.h; sourceTree = "<group>"; };
+		61583DBD18E669E000234E27 /* GTLQueryMobilebackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLQueryMobilebackend.m; sourceTree = "<group>"; };
+		61583DBE18E669E000234E27 /* GTLServiceMobilebackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLServiceMobilebackend.h; sourceTree = "<group>"; };
+		61583DBF18E669E000234E27 /* GTLServiceMobilebackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLServiceMobilebackend.m; sourceTree = "<group>"; };
+		61583DC118E669E000234E27 /* GTLBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBase64.h; sourceTree = "<group>"; };
+		61583DC218E669E000234E27 /* GTLBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBase64.m; sourceTree = "<group>"; };
+		61583DC318E669E000234E27 /* GTLBatchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBatchQuery.h; sourceTree = "<group>"; };
+		61583DC418E669E000234E27 /* GTLBatchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBatchQuery.m; sourceTree = "<group>"; };
+		61583DC518E669E000234E27 /* GTLBatchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBatchResult.h; sourceTree = "<group>"; };
+		61583DC618E669E000234E27 /* GTLBatchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBatchResult.m; sourceTree = "<group>"; };
+		61583DC718E669E000234E27 /* GTLDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLDateTime.h; sourceTree = "<group>"; };
+		61583DC818E669E000234E27 /* GTLDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLDateTime.m; sourceTree = "<group>"; };
+		61583DC918E669E000234E27 /* GTLDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLDefines.h; sourceTree = "<group>"; };
+		61583DCA18E669E000234E27 /* GTLErrorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLErrorObject.h; sourceTree = "<group>"; };
+		61583DCB18E669E000234E27 /* GTLErrorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLErrorObject.m; sourceTree = "<group>"; };
+		61583DCC18E669E000234E27 /* GTLFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLFramework.h; sourceTree = "<group>"; };
+		61583DCD18E669E000234E27 /* GTLFramework.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLFramework.m; sourceTree = "<group>"; };
+		61583DCE18E669E000234E27 /* GTLJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLJSONParser.h; sourceTree = "<group>"; };
+		61583DCF18E669E000234E27 /* GTLJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLJSONParser.m; sourceTree = "<group>"; };
+		61583DD018E669E000234E27 /* GTLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLObject.h; sourceTree = "<group>"; };
+		61583DD118E669E000234E27 /* GTLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLObject.m; sourceTree = "<group>"; };
+		61583DD218E669E000234E27 /* GTLQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLQuery.h; sourceTree = "<group>"; };
+		61583DD318E669E000234E27 /* GTLQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLQuery.m; sourceTree = "<group>"; };
+		61583DD418E669E000234E27 /* GTLRuntimeCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLRuntimeCommon.h; sourceTree = "<group>"; };
+		61583DD518E669E000234E27 /* GTLRuntimeCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLRuntimeCommon.m; sourceTree = "<group>"; };
+		61583DD618E669E000234E27 /* GTLService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLService.h; sourceTree = "<group>"; };
+		61583DD718E669E000234E27 /* GTLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLService.m; sourceTree = "<group>"; };
+		61583DD818E669E000234E27 /* GTLTargetNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLTargetNamespace.h; sourceTree = "<group>"; };
+		61583DD918E669E000234E27 /* GTLUploadParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLUploadParameters.h; sourceTree = "<group>"; };
+		61583DDA18E669E000234E27 /* GTLUploadParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLUploadParameters.m; sourceTree = "<group>"; };
+		61583DDB18E669E000234E27 /* GTLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLUtilities.h; sourceTree = "<group>"; };
+		61583DDC18E669E000234E27 /* GTLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLUtilities.m; sourceTree = "<group>"; };
+		61583DDD18E669E000234E27 /* GTMGatherInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMGatherInputStream.h; sourceTree = "<group>"; };
+		61583DDE18E669E000234E27 /* GTMGatherInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMGatherInputStream.m; sourceTree = "<group>"; };
+		61583DDF18E669E000234E27 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		61583DE018E669E000234E27 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		61583DE118E669E000234E27 /* GTMHTTPFetcherLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcherLogging.h; sourceTree = "<group>"; };
+		61583DE218E669E000234E27 /* GTMHTTPFetcherLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcherLogging.m; sourceTree = "<group>"; };
+		61583DE318E669E000234E27 /* GTMHTTPFetcherLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcherLogViewController.h; sourceTree = "<group>"; };
+		61583DE418E669E000234E27 /* GTMHTTPFetcherLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcherLogViewController.m; sourceTree = "<group>"; };
+		61583DE518E669E000234E27 /* GTMHTTPFetcherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcherService.h; sourceTree = "<group>"; };
+		61583DE618E669E000234E27 /* GTMHTTPFetcherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcherService.m; sourceTree = "<group>"; };
+		61583DE718E669E000234E27 /* GTMHTTPFetchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetchHistory.h; sourceTree = "<group>"; };
+		61583DE818E669E000234E27 /* GTMHTTPFetchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetchHistory.m; sourceTree = "<group>"; };
+		61583DE918E669E000234E27 /* GTMHTTPUploadFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPUploadFetcher.h; sourceTree = "<group>"; };
+		61583DEA18E669E000234E27 /* GTMHTTPUploadFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPUploadFetcher.m; sourceTree = "<group>"; };
+		61583DEB18E669E000234E27 /* GTMMIMEDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMMIMEDocument.h; sourceTree = "<group>"; };
+		61583DEC18E669E000234E27 /* GTMMIMEDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMMIMEDocument.m; sourceTree = "<group>"; };
+		61583DED18E669E000234E27 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		61583DEE18E669E000234E27 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		61583DEF18E669E000234E27 /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		61583DF018E669E000234E27 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		61583DF118E669E000234E27 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
+		61583DF218E669E000234E27 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
+		61583DF318E669E000234E27 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		61583DF418E669E000234E27 /* GTMReadMonitorInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMReadMonitorInputStream.h; sourceTree = "<group>"; };
+		61583DF518E669E000234E27 /* GTMReadMonitorInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMReadMonitorInputStream.m; sourceTree = "<group>"; };
+		61583DF618E669E000234E27 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		61583DF718E669E000234E27 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		61583DF918E669E100234E27 /* CloudMessageProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudMessageProperties.h; sourceTree = "<group>"; };
+		61583DFA18E669E100234E27 /* CloudMessageProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudMessageProperties.m; sourceTree = "<group>"; };
+		61583DFB18E669E100234E27 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		61583DFC18E669E100234E27 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		61583DFD18E669E100234E27 /* EditModeUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditModeUITextView.h; sourceTree = "<group>"; };
+		61583DFE18E669E100234E27 /* EditModeUITextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditModeUITextView.m; sourceTree = "<group>"; };
+		61583E0018E669E100234E27 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iphone.storyboard; sourceTree = "<group>"; };
+		61583E0118E669E100234E27 /* GTLMobilebackendCloudMessageEntityDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendCloudMessageEntityDto.h; sourceTree = "<group>"; };
+		61583E0218E669E100234E27 /* GTLMobilebackendCloudMessageEntityDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendCloudMessageEntityDto.m; sourceTree = "<group>"; };
+		61583E0318E669E100234E27 /* GTLMobilebackendEntityDto+PropertiesType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTLMobilebackendEntityDto+PropertiesType.h"; sourceTree = "<group>"; };
+		61583E0418E669E100234E27 /* GTLMobilebackendEntityDto+PropertiesType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTLMobilebackendEntityDto+PropertiesType.m"; sourceTree = "<group>"; };
+		61583E0518E669E100234E27 /* GTLMobilebackendGuestbookEntityDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMobilebackendGuestbookEntityDto.h; sourceTree = "<group>"; };
+		61583E0618E669E100234E27 /* GTLMobilebackendGuestbookEntityDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMobilebackendGuestbookEntityDto.m; sourceTree = "<group>"; };
+		61583E0718E669E100234E27 /* GuestbookProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestbookProperties.h; sourceTree = "<group>"; };
+		61583E0818E669E100234E27 /* GuestbookProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestbookProperties.m; sourceTree = "<group>"; };
+		61583E0918E669E100234E27 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		61583E0A18E669E100234E27 /* MessagesTableViewController+ViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MessagesTableViewController+ViewHelper.h"; sourceTree = "<group>"; };
+		61583E0B18E669E100234E27 /* MessagesTableViewController+ViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MessagesTableViewController+ViewHelper.m"; sourceTree = "<group>"; };
+		61583E0C18E669E100234E27 /* MessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableViewController.h; sourceTree = "<group>"; };
+		61583E0D18E669E100234E27 /* MessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableViewController.m; sourceTree = "<group>"; };
+		61583E0E18E669E100234E27 /* Splash1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splash1ViewController.h; sourceTree = "<group>"; };
+		61583E0F18E669E100234E27 /* Splash1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Splash1ViewController.m; sourceTree = "<group>"; };
+		61583E1018E669E100234E27 /* Splash2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splash2ViewController.h; sourceTree = "<group>"; };
+		61583E1118E669E100234E27 /* Splash2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Splash2ViewController.m; sourceTree = "<group>"; };
+		61583E1218E669E100234E27 /* Splash3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splash3ViewController.h; sourceTree = "<group>"; };
+		61583E1318E669E100234E27 /* Splash3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Splash3ViewController.m; sourceTree = "<group>"; };
+		61583E1518E669E100234E27 /* CloudBackendIOSClient-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CloudBackendIOSClient-Info.plist"; sourceTree = "<group>"; };
+		61583E1618E669E100234E27 /* CloudBackendIOSClient-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CloudBackendIOSClient-Prefix.pch"; sourceTree = "<group>"; };
+		61583E1718E669E100234E27 /* CloudBackendIOSClientAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudBackendIOSClientAppDelegate.h; sourceTree = "<group>"; };
+		61583E1818E669E100234E27 /* CloudBackendIOSClientAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudBackendIOSClientAppDelegate.m; sourceTree = "<group>"; };
+		61583E1918E669E100234E27 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +443,7 @@
 		61583D1A18E6667200234E27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61583D4818E669E000234E27 /* solutions-mobile-backend-starter-ios-client-master */,
 				61583D1B18E6667200234E27 /* Mister Alarm-Info.plist */,
 				61583D1C18E6667200234E27 /* InfoPlist.strings */,
 				61583D1F18E6667200234E27 /* main.m */,
@@ -150,6 +468,302 @@
 				61583D3B18E6667200234E27 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61583D4818E669E000234E27 /* solutions-mobile-backend-starter-ios-client-master */ = {
+			isa = PBXGroup;
+			children = (
+				61583D4918E669E000234E27 /* api */,
+				61583D5D18E669E000234E27 /* art */,
+				61583DA718E669E000234E27 /* CloudBackendIOSClient.xcodeproj */,
+				61583DAA18E669E000234E27 /* Default-568h@2x.png */,
+				61583DAB18E669E000234E27 /* endpoint */,
+				61583DC018E669E000234E27 /* gtl */,
+				61583DF618E669E000234E27 /* LICENSE */,
+				61583DF718E669E000234E27 /* README.md */,
+				61583DF818E669E000234E27 /* sample */,
+			);
+			path = "solutions-mobile-backend-starter-ios-client-master";
+			sourceTree = "<group>";
+		};
+		61583D4918E669E000234E27 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				61583D4A18E669E000234E27 /* CloudAuthenticator.h */,
+				61583D4B18E669E000234E27 /* CloudAuthenticator.m */,
+				61583D4C18E669E000234E27 /* CloudAuthenticatorDelegate.h */,
+				61583D4D18E669E000234E27 /* CloudControllerDelegate.h */,
+				61583D4E18E669E000234E27 /* CloudControllerHelper.h */,
+				61583D4F18E669E000234E27 /* CloudControllerHelper.m */,
+				61583D5018E669E000234E27 /* CloudEntity.h */,
+				61583D5118E669E000234E27 /* CloudEntity.m */,
+				61583D5218E669E000234E27 /* CloudEntityActionDelegate.h */,
+				61583D5318E669E000234E27 /* CloudEntityCollection.h */,
+				61583D5418E669E000234E27 /* CloudEntityCollection.m */,
+				61583D5518E669E000234E27 /* CloudFilter.h */,
+				61583D5618E669E000234E27 /* CloudFilter.m */,
+				61583D5718E669E000234E27 /* CloudMessagingManager.h */,
+				61583D5818E669E000234E27 /* CloudMessagingManager.m */,
+				61583D5918E669E000234E27 /* CloudNotificationHandler.h */,
+				61583D5A18E669E000234E27 /* CloudNotificationHandler.m */,
+				61583D5B18E669E000234E27 /* GTLMobilebackendQueryDto+Helper.h */,
+				61583D5C18E669E000234E27 /* GTLMobilebackendQueryDto+Helper.m */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		61583D5D18E669E000234E27 /* art */ = {
+			isa = PBXGroup;
+			children = (
+				61583D5E18E669E000234E27 /* api */,
+				61583D7218E669E000234E27 /* art */,
+				61583D7F18E669E000234E27 /* CloudBackendIOSClient.xcodeproj */,
+				61583D8218E669E000234E27 /* Default-568h@2x.png */,
+				61583D8318E669E000234E27 /* ic_launcher_guestbook.png */,
+				61583D8418E669E000234E27 /* ic_left_arrow.png */,
+				61583D8518E669E000234E27 /* ic_menu_guestbook.png */,
+				61583D8618E669E000234E27 /* ic_right_arrow.png */,
+				61583D8718E669E000234E27 /* ic_send.png */,
+				61583D8818E669E000234E27 /* img_connect.png */,
+				61583D8918E669E000234E27 /* img_done.png */,
+				61583D8A18E669E000234E27 /* img_dots_1.png */,
+				61583D8B18E669E000234E27 /* img_dots_2.png */,
+				61583D8C18E669E000234E27 /* img_dots_3.png */,
+				61583D8D18E669E000234E27 /* img_guestbook_splash.png */,
+				61583D8E18E669E000234E27 /* img_logo_splash.png */,
+				61583D8F18E669E000234E27 /* LICENSE */,
+				61583D9018E669E000234E27 /* README.md */,
+				61583D9118E669E000234E27 /* sample */,
+			);
+			path = art;
+			sourceTree = "<group>";
+		};
+		61583D5E18E669E000234E27 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				61583D5F18E669E000234E27 /* CloudAuthenticator.h */,
+				61583D6018E669E000234E27 /* CloudAuthenticator.m */,
+				61583D6118E669E000234E27 /* CloudAuthenticatorDelegate.h */,
+				61583D6218E669E000234E27 /* CloudControllerDelegate.h */,
+				61583D6318E669E000234E27 /* CloudControllerHelper.h */,
+				61583D6418E669E000234E27 /* CloudControllerHelper.m */,
+				61583D6518E669E000234E27 /* CloudEntity.h */,
+				61583D6618E669E000234E27 /* CloudEntity.m */,
+				61583D6718E669E000234E27 /* CloudEntityActionDelegate.h */,
+				61583D6818E669E000234E27 /* CloudEntityCollection.h */,
+				61583D6918E669E000234E27 /* CloudEntityCollection.m */,
+				61583D6A18E669E000234E27 /* CloudFilter.h */,
+				61583D6B18E669E000234E27 /* CloudFilter.m */,
+				61583D6C18E669E000234E27 /* CloudMessagingManager.h */,
+				61583D6D18E669E000234E27 /* CloudMessagingManager.m */,
+				61583D6E18E669E000234E27 /* CloudNotificationHandler.h */,
+				61583D6F18E669E000234E27 /* CloudNotificationHandler.m */,
+				61583D7018E669E000234E27 /* GTLMobilebackendQueryDto+Helper.h */,
+				61583D7118E669E000234E27 /* GTLMobilebackendQueryDto+Helper.m */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		61583D7218E669E000234E27 /* art */ = {
+			isa = PBXGroup;
+			children = (
+				61583D7318E669E000234E27 /* ic_launcher_guestbook.png */,
+				61583D7418E669E000234E27 /* ic_left_arrow.png */,
+				61583D7518E669E000234E27 /* ic_menu_guestbook.png */,
+				61583D7618E669E000234E27 /* ic_right_arrow.png */,
+				61583D7718E669E000234E27 /* ic_send.png */,
+				61583D7818E669E000234E27 /* img_connect.png */,
+				61583D7918E669E000234E27 /* img_done.png */,
+				61583D7A18E669E000234E27 /* img_dots_1.png */,
+				61583D7B18E669E000234E27 /* img_dots_2.png */,
+				61583D7C18E669E000234E27 /* img_dots_3.png */,
+				61583D7D18E669E000234E27 /* img_guestbook_splash.png */,
+				61583D7E18E669E000234E27 /* img_logo_splash.png */,
+			);
+			path = art;
+			sourceTree = "<group>";
+		};
+		61583D8018E669E000234E27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61583E8D18E669E100234E27 /* dev.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61583D9118E669E000234E27 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				61583D9218E669E000234E27 /* Constants.h */,
+				61583D9318E669E000234E27 /* Constants.m */,
+				61583D9418E669E000234E27 /* EditModeUITextView.h */,
+				61583D9518E669E000234E27 /* EditModeUITextView.m */,
+				61583D9618E669E000234E27 /* iphone.storyboard */,
+				61583D9818E669E000234E27 /* icon.png */,
+				61583D9918E669E000234E27 /* MessagesTableViewController.h */,
+				61583D9A18E669E000234E27 /* MessagesTableViewController.m */,
+				61583D9B18E669E000234E27 /* Splash1ViewController.h */,
+				61583D9C18E669E000234E27 /* Splash1ViewController.m */,
+				61583D9D18E669E000234E27 /* Splash2ViewController.h */,
+				61583D9E18E669E000234E27 /* Splash2ViewController.m */,
+				61583D9F18E669E000234E27 /* Splash3ViewController.h */,
+				61583DA018E669E000234E27 /* Splash3ViewController.m */,
+				61583DA118E669E000234E27 /* SupportFiles */,
+			);
+			path = sample;
+			sourceTree = "<group>";
+		};
+		61583DA118E669E000234E27 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				61583DA218E669E000234E27 /* CloudBackendIOSClient-Info.plist */,
+				61583DA318E669E000234E27 /* CloudBackendIOSClient-Prefix.pch */,
+				61583DA418E669E000234E27 /* CloudBackendIOSClientAppDelegate.h */,
+				61583DA518E669E000234E27 /* CloudBackendIOSClientAppDelegate.m */,
+				61583DA618E669E000234E27 /* main.m */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		61583DA818E669E000234E27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61583E8A18E669E100234E27 /* dev.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61583DAB18E669E000234E27 /* endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				61583DAC18E669E000234E27 /* GTLMobilebackend.h */,
+				61583DAD18E669E000234E27 /* GTLMobilebackend_Sources.m */,
+				61583DAE18E669E000234E27 /* GTLMobilebackendBlobAccess.h */,
+				61583DAF18E669E000234E27 /* GTLMobilebackendBlobAccess.m */,
+				61583DB018E669E000234E27 /* GTLMobilebackendConstants.h */,
+				61583DB118E669E000234E27 /* GTLMobilebackendConstants.m */,
+				61583DB218E669E000234E27 /* GTLMobilebackendEntityDto.h */,
+				61583DB318E669E000234E27 /* GTLMobilebackendEntityDto.m */,
+				61583DB418E669E000234E27 /* GTLMobilebackendEntityListDto.h */,
+				61583DB518E669E000234E27 /* GTLMobilebackendEntityListDto.m */,
+				61583DB618E669E000234E27 /* GTLMobilebackendFilter.h */,
+				61583DB718E669E000234E27 /* GTLMobilebackendFilter.m */,
+				61583DB818E669E000234E27 /* GTLMobilebackendFilterDto.h */,
+				61583DB918E669E000234E27 /* GTLMobilebackendFilterDto.m */,
+				61583DBA18E669E000234E27 /* GTLMobilebackendQueryDto.h */,
+				61583DBB18E669E000234E27 /* GTLMobilebackendQueryDto.m */,
+				61583DBC18E669E000234E27 /* GTLQueryMobilebackend.h */,
+				61583DBD18E669E000234E27 /* GTLQueryMobilebackend.m */,
+				61583DBE18E669E000234E27 /* GTLServiceMobilebackend.h */,
+				61583DBF18E669E000234E27 /* GTLServiceMobilebackend.m */,
+			);
+			path = endpoint;
+			sourceTree = "<group>";
+		};
+		61583DC018E669E000234E27 /* gtl */ = {
+			isa = PBXGroup;
+			children = (
+				61583DC118E669E000234E27 /* GTLBase64.h */,
+				61583DC218E669E000234E27 /* GTLBase64.m */,
+				61583DC318E669E000234E27 /* GTLBatchQuery.h */,
+				61583DC418E669E000234E27 /* GTLBatchQuery.m */,
+				61583DC518E669E000234E27 /* GTLBatchResult.h */,
+				61583DC618E669E000234E27 /* GTLBatchResult.m */,
+				61583DC718E669E000234E27 /* GTLDateTime.h */,
+				61583DC818E669E000234E27 /* GTLDateTime.m */,
+				61583DC918E669E000234E27 /* GTLDefines.h */,
+				61583DCA18E669E000234E27 /* GTLErrorObject.h */,
+				61583DCB18E669E000234E27 /* GTLErrorObject.m */,
+				61583DCC18E669E000234E27 /* GTLFramework.h */,
+				61583DCD18E669E000234E27 /* GTLFramework.m */,
+				61583DCE18E669E000234E27 /* GTLJSONParser.h */,
+				61583DCF18E669E000234E27 /* GTLJSONParser.m */,
+				61583DD018E669E000234E27 /* GTLObject.h */,
+				61583DD118E669E000234E27 /* GTLObject.m */,
+				61583DD218E669E000234E27 /* GTLQuery.h */,
+				61583DD318E669E000234E27 /* GTLQuery.m */,
+				61583DD418E669E000234E27 /* GTLRuntimeCommon.h */,
+				61583DD518E669E000234E27 /* GTLRuntimeCommon.m */,
+				61583DD618E669E000234E27 /* GTLService.h */,
+				61583DD718E669E000234E27 /* GTLService.m */,
+				61583DD818E669E000234E27 /* GTLTargetNamespace.h */,
+				61583DD918E669E000234E27 /* GTLUploadParameters.h */,
+				61583DDA18E669E000234E27 /* GTLUploadParameters.m */,
+				61583DDB18E669E000234E27 /* GTLUtilities.h */,
+				61583DDC18E669E000234E27 /* GTLUtilities.m */,
+				61583DDD18E669E000234E27 /* GTMGatherInputStream.h */,
+				61583DDE18E669E000234E27 /* GTMGatherInputStream.m */,
+				61583DDF18E669E000234E27 /* GTMHTTPFetcher.h */,
+				61583DE018E669E000234E27 /* GTMHTTPFetcher.m */,
+				61583DE118E669E000234E27 /* GTMHTTPFetcherLogging.h */,
+				61583DE218E669E000234E27 /* GTMHTTPFetcherLogging.m */,
+				61583DE318E669E000234E27 /* GTMHTTPFetcherLogViewController.h */,
+				61583DE418E669E000234E27 /* GTMHTTPFetcherLogViewController.m */,
+				61583DE518E669E000234E27 /* GTMHTTPFetcherService.h */,
+				61583DE618E669E000234E27 /* GTMHTTPFetcherService.m */,
+				61583DE718E669E000234E27 /* GTMHTTPFetchHistory.h */,
+				61583DE818E669E000234E27 /* GTMHTTPFetchHistory.m */,
+				61583DE918E669E000234E27 /* GTMHTTPUploadFetcher.h */,
+				61583DEA18E669E000234E27 /* GTMHTTPUploadFetcher.m */,
+				61583DEB18E669E000234E27 /* GTMMIMEDocument.h */,
+				61583DEC18E669E000234E27 /* GTMMIMEDocument.m */,
+				61583DED18E669E000234E27 /* GTMOAuth2Authentication.h */,
+				61583DEE18E669E000234E27 /* GTMOAuth2Authentication.m */,
+				61583DEF18E669E000234E27 /* GTMOAuth2SignIn.h */,
+				61583DF018E669E000234E27 /* GTMOAuth2SignIn.m */,
+				61583DF118E669E000234E27 /* GTMOAuth2ViewControllerTouch.h */,
+				61583DF218E669E000234E27 /* GTMOAuth2ViewControllerTouch.m */,
+				61583DF318E669E000234E27 /* GTMOAuth2ViewTouch.xib */,
+				61583DF418E669E000234E27 /* GTMReadMonitorInputStream.h */,
+				61583DF518E669E000234E27 /* GTMReadMonitorInputStream.m */,
+			);
+			path = gtl;
+			sourceTree = "<group>";
+		};
+		61583DF818E669E000234E27 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				61583DF918E669E100234E27 /* CloudMessageProperties.h */,
+				61583DFA18E669E100234E27 /* CloudMessageProperties.m */,
+				61583DFB18E669E100234E27 /* Constants.h */,
+				61583DFC18E669E100234E27 /* Constants.m */,
+				61583DFD18E669E100234E27 /* EditModeUITextView.h */,
+				61583DFE18E669E100234E27 /* EditModeUITextView.m */,
+				61583DFF18E669E100234E27 /* iphone.storyboard */,
+				61583E0118E669E100234E27 /* GTLMobilebackendCloudMessageEntityDto.h */,
+				61583E0218E669E100234E27 /* GTLMobilebackendCloudMessageEntityDto.m */,
+				61583E0318E669E100234E27 /* GTLMobilebackendEntityDto+PropertiesType.h */,
+				61583E0418E669E100234E27 /* GTLMobilebackendEntityDto+PropertiesType.m */,
+				61583E0518E669E100234E27 /* GTLMobilebackendGuestbookEntityDto.h */,
+				61583E0618E669E100234E27 /* GTLMobilebackendGuestbookEntityDto.m */,
+				61583E0718E669E100234E27 /* GuestbookProperties.h */,
+				61583E0818E669E100234E27 /* GuestbookProperties.m */,
+				61583E0918E669E100234E27 /* icon.png */,
+				61583E0A18E669E100234E27 /* MessagesTableViewController+ViewHelper.h */,
+				61583E0B18E669E100234E27 /* MessagesTableViewController+ViewHelper.m */,
+				61583E0C18E669E100234E27 /* MessagesTableViewController.h */,
+				61583E0D18E669E100234E27 /* MessagesTableViewController.m */,
+				61583E0E18E669E100234E27 /* Splash1ViewController.h */,
+				61583E0F18E669E100234E27 /* Splash1ViewController.m */,
+				61583E1018E669E100234E27 /* Splash2ViewController.h */,
+				61583E1118E669E100234E27 /* Splash2ViewController.m */,
+				61583E1218E669E100234E27 /* Splash3ViewController.h */,
+				61583E1318E669E100234E27 /* Splash3ViewController.m */,
+				61583E1418E669E100234E27 /* SupportFiles */,
+			);
+			path = sample;
+			sourceTree = "<group>";
+		};
+		61583E1418E669E100234E27 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				61583E1518E669E100234E27 /* CloudBackendIOSClient-Info.plist */,
+				61583E1618E669E100234E27 /* CloudBackendIOSClient-Prefix.pch */,
+				61583E1718E669E100234E27 /* CloudBackendIOSClientAppDelegate.h */,
+				61583E1818E669E100234E27 /* CloudBackendIOSClientAppDelegate.m */,
+				61583E1918E669E100234E27 /* main.m */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +829,16 @@
 			mainGroup = 61583D0718E6667100234E27;
 			productRefGroup = 61583D1118E6667200234E27 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 61583DA818E669E000234E27 /* Products */;
+					ProjectRef = 61583DA718E669E000234E27 /* CloudBackendIOSClient.xcodeproj */;
+				},
+				{
+					ProductGroup = 61583D8018E669E000234E27 /* Products */;
+					ProjectRef = 61583D7F18E669E000234E27 /* CloudBackendIOSClient.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				61583D0F18E6667100234E27 /* Mister Alarm */,
@@ -223,14 +847,68 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		61583E8A18E669E100234E27 /* dev.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = dev.app;
+			remoteRef = 61583E8918E669E100234E27 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		61583E8D18E669E100234E27 /* dev.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = dev.app;
+			remoteRef = 61583E8C18E669E100234E27 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		61583D0E18E6667100234E27 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61583E8518E669E100234E27 /* CloudBackendIOSClient-Info.plist in Resources */,
+				61583E7318E669E100234E27 /* GTMOAuth2ViewTouch.xib in Resources */,
+				61583E3A18E669E100234E27 /* ic_right_arrow.png in Resources */,
+				61583E3B18E669E100234E27 /* ic_send.png in Resources */,
+				61583E7A18E669E100234E27 /* iphone.storyboard in Resources */,
+				61583E2C18E669E100234E27 /* ic_menu_guestbook.png in Resources */,
+				61583E2B18E669E100234E27 /* ic_left_arrow.png in Resources */,
+				61583E4818E669E100234E27 /* icon.png in Resources */,
+				61583E7518E669E100234E27 /* LICENSE in Resources */,
+				61583E4318E669E100234E27 /* LICENSE in Resources */,
 				61583D2C18E6667200234E27 /* Images.xcassets in Resources */,
+				61583E2F18E669E100234E27 /* img_connect.png in Resources */,
+				61583E3518E669E100234E27 /* img_logo_splash.png in Resources */,
+				61583E3718E669E100234E27 /* ic_launcher_guestbook.png in Resources */,
+				61583E3418E669E100234E27 /* img_guestbook_splash.png in Resources */,
+				61583E3218E669E100234E27 /* img_dots_2.png in Resources */,
+				61583E3C18E669E100234E27 /* img_connect.png in Resources */,
+				61583E4418E669E100234E27 /* README.md in Resources */,
+				61583E4018E669E100234E27 /* img_dots_3.png in Resources */,
+				61583E3918E669E100234E27 /* ic_menu_guestbook.png in Resources */,
+				61583E4218E669E100234E27 /* img_logo_splash.png in Resources */,
+				61583E3D18E669E100234E27 /* img_done.png in Resources */,
+				61583E3118E669E100234E27 /* img_dots_1.png in Resources */,
+				61583E2E18E669E100234E27 /* ic_send.png in Resources */,
+				61583E3018E669E100234E27 /* img_done.png in Resources */,
+				61583E4D18E669E100234E27 /* CloudBackendIOSClient-Info.plist in Resources */,
 				61583D1E18E6667200234E27 /* InfoPlist.strings in Resources */,
+				61583E7F18E669E100234E27 /* icon.png in Resources */,
+				61583E3818E669E100234E27 /* ic_left_arrow.png in Resources */,
+				61583E3F18E669E100234E27 /* img_dots_2.png in Resources */,
+				61583E5018E669E100234E27 /* Default-568h@2x.png in Resources */,
+				61583E4118E669E100234E27 /* img_guestbook_splash.png in Resources */,
+				61583E7618E669E100234E27 /* README.md in Resources */,
 				61583D2718E6667200234E27 /* Main.storyboard in Resources */,
+				61583E2D18E669E100234E27 /* ic_right_arrow.png in Resources */,
+				61583E3618E669E100234E27 /* Default-568h@2x.png in Resources */,
+				61583E3318E669E100234E27 /* img_dots_3.png in Resources */,
+				61583E4718E669E100234E27 /* iphone.storyboard in Resources */,
+				61583E2A18E669E100234E27 /* ic_launcher_guestbook.png in Resources */,
+				61583E3E18E669E100234E27 /* img_dots_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +927,82 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61583E6318E669E100234E27 /* GTLQuery.m in Sources */,
 				61583D2A18E6667200234E27 /* ViewController.m in Sources */,
+				61583E5518E669E100234E27 /* GTLMobilebackendEntityListDto.m in Sources */,
+				61583E5A18E669E100234E27 /* GTLServiceMobilebackend.m in Sources */,
+				61583E6B18E669E100234E27 /* GTMHTTPFetcherLogViewController.m in Sources */,
+				61583E2518E669E100234E27 /* CloudEntityCollection.m in Sources */,
+				61583E1A18E669E100234E27 /* CloudAuthenticator.m in Sources */,
+				61583E7718E669E100234E27 /* CloudMessageProperties.m in Sources */,
+				61583E7118E669E100234E27 /* GTMOAuth2SignIn.m in Sources */,
+				61583E2318E669E100234E27 /* CloudControllerHelper.m in Sources */,
+				61583E1C18E669E100234E27 /* CloudEntity.m in Sources */,
+				61583E6818E669E100234E27 /* GTMGatherInputStream.m in Sources */,
+				61583E4C18E669E100234E27 /* Splash3ViewController.m in Sources */,
+				61583E2618E669E100234E27 /* CloudFilter.m in Sources */,
 				61583D2418E6667200234E27 /* AppDelegate.m in Sources */,
+				61583E4918E669E100234E27 /* MessagesTableViewController.m in Sources */,
+				61583E8018E669E100234E27 /* MessagesTableViewController+ViewHelper.m in Sources */,
+				61583E6218E669E100234E27 /* GTLObject.m in Sources */,
+				61583E7218E669E100234E27 /* GTMOAuth2ViewControllerTouch.m in Sources */,
+				61583E5D18E669E100234E27 /* GTLBatchResult.m in Sources */,
+				61583E1B18E669E100234E27 /* CloudControllerHelper.m in Sources */,
+				61583E1E18E669E100234E27 /* CloudFilter.m in Sources */,
+				61583E7418E669E100234E27 /* GTMReadMonitorInputStream.m in Sources */,
+				61583E8418E669E100234E27 /* Splash3ViewController.m in Sources */,
+				61583E2718E669E100234E27 /* CloudMessagingManager.m in Sources */,
+				61583E7B18E669E100234E27 /* GTLMobilebackendCloudMessageEntityDto.m in Sources */,
+				61583E7E18E669E100234E27 /* GuestbookProperties.m in Sources */,
+				61583E6018E669E100234E27 /* GTLFramework.m in Sources */,
+				61583E6A18E669E100234E27 /* GTMHTTPFetcherLogging.m in Sources */,
+				61583E6118E669E100234E27 /* GTLJSONParser.m in Sources */,
+				61583E2118E669E100234E27 /* GTLMobilebackendQueryDto+Helper.m in Sources */,
+				61583E2418E669E100234E27 /* CloudEntity.m in Sources */,
+				61583E7D18E669E100234E27 /* GTLMobilebackendGuestbookEntityDto.m in Sources */,
+				61583E4E18E669E100234E27 /* CloudBackendIOSClientAppDelegate.m in Sources */,
+				61583E7018E669E100234E27 /* GTMOAuth2Authentication.m in Sources */,
 				61583D2018E6667200234E27 /* main.m in Sources */,
+				61583E6918E669E100234E27 /* GTMHTTPFetcher.m in Sources */,
+				61583E5418E669E100234E27 /* GTLMobilebackendEntityDto.m in Sources */,
+				61583E4F18E669E100234E27 /* main.m in Sources */,
+				61583E5F18E669E100234E27 /* GTLErrorObject.m in Sources */,
+				61583E7818E669E100234E27 /* Constants.m in Sources */,
+				61583E6418E669E100234E27 /* GTLRuntimeCommon.m in Sources */,
+				61583E6618E669E100234E27 /* GTLUploadParameters.m in Sources */,
+				61583E6718E669E100234E27 /* GTLUtilities.m in Sources */,
+				61583E5918E669E100234E27 /* GTLQueryMobilebackend.m in Sources */,
+				61583E7918E669E100234E27 /* EditModeUITextView.m in Sources */,
+				61583E8718E669E100234E27 /* main.m in Sources */,
+				61583E4B18E669E100234E27 /* Splash2ViewController.m in Sources */,
+				61583E8118E669E100234E27 /* MessagesTableViewController.m in Sources */,
+				61583E5718E669E100234E27 /* GTLMobilebackendFilterDto.m in Sources */,
+				61583E6D18E669E100234E27 /* GTMHTTPFetchHistory.m in Sources */,
+				61583E5618E669E100234E27 /* GTLMobilebackendFilter.m in Sources */,
+				61583E6518E669E100234E27 /* GTLService.m in Sources */,
+				61583E8618E669E100234E27 /* CloudBackendIOSClientAppDelegate.m in Sources */,
+				61583E2918E669E100234E27 /* GTLMobilebackendQueryDto+Helper.m in Sources */,
+				61583E5C18E669E100234E27 /* GTLBatchQuery.m in Sources */,
+				61583E8318E669E100234E27 /* Splash2ViewController.m in Sources */,
+				61583E5E18E669E100234E27 /* GTLDateTime.m in Sources */,
+				61583E4A18E669E100234E27 /* Splash1ViewController.m in Sources */,
+				61583E7C18E669E100234E27 /* GTLMobilebackendEntityDto+PropertiesType.m in Sources */,
+				61583E1D18E669E100234E27 /* CloudEntityCollection.m in Sources */,
+				61583E5218E669E100234E27 /* GTLMobilebackendBlobAccess.m in Sources */,
+				61583E5318E669E100234E27 /* GTLMobilebackendConstants.m in Sources */,
+				61583E4518E669E100234E27 /* Constants.m in Sources */,
+				61583E5B18E669E100234E27 /* GTLBase64.m in Sources */,
+				61583E2218E669E100234E27 /* CloudAuthenticator.m in Sources */,
+				61583E6C18E669E100234E27 /* GTMHTTPFetcherService.m in Sources */,
+				61583E5818E669E100234E27 /* GTLMobilebackendQueryDto.m in Sources */,
+				61583E5118E669E100234E27 /* GTLMobilebackend_Sources.m in Sources */,
+				61583E2818E669E100234E27 /* CloudNotificationHandler.m in Sources */,
+				61583E1F18E669E100234E27 /* CloudMessagingManager.m in Sources */,
+				61583E4618E669E100234E27 /* EditModeUITextView.m in Sources */,
+				61583E6E18E669E100234E27 /* GTMHTTPUploadFetcher.m in Sources */,
+				61583E8218E669E100234E27 /* Splash1ViewController.m in Sources */,
+				61583E2018E669E100234E27 /* CloudNotificationHandler.m in Sources */,
+				61583E6F18E669E100234E27 /* GTMMIMEDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +1047,22 @@
 				61583D3C18E6667200234E27 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		61583D9618E669E000234E27 /* iphone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61583D9718E669E000234E27 /* en */,
+			);
+			name = iphone.storyboard;
+			sourceTree = "<group>";
+		};
+		61583DFF18E669E100234E27 /* iphone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61583E0018E669E100234E27 /* en */,
+			);
+			name = iphone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
