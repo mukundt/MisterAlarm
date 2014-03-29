@@ -32,6 +32,7 @@ unsigned long lamp_end_time = 0;
 unsigned long mist_end_time = 0;
 
 // FLAGS
+boolean lamp = false;
 boolean lamp_on = false;
 boolean mist_on = false;
 boolean horn_on = false;
@@ -68,6 +69,7 @@ void loop()
   mist_do_events();
   horn_do_events();
   check_sonar();
+  lamp_flick();
 }
 
 // reads all bytes in the serial input buffer, sets flags and timers accordingly
@@ -78,7 +80,10 @@ void process_bluetooth_buffer()
     char command = (char)ble_read();
     switch (command)
     {
-      case 'L': // lamp
+      case 'O': //lamp on
+        lamp = true;
+      case 'L': // lamp flicker
+        lamp = false;
         lamp_on = true;
         lamp_count = 5;
         lamp_start_time = millis();
@@ -93,6 +98,7 @@ void process_bluetooth_buffer()
         horn_start_time = millis();
         break;
       case 'B':
+        lamp = false;
         lamp_count = 0;
         mist_count = 0;
       case 'C':
@@ -135,6 +141,12 @@ void check_sonar()
       ble_write('W'); // wave
     }
   }
+}
+
+void lamp_flick()
+{
+  if (!lamp) return;
+  digitalWrite(PIN_LAMP, HIGH);
 }
 
 // reads flag and timer, turns lamp on/off accordingly

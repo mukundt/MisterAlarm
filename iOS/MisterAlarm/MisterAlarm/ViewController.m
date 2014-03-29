@@ -63,7 +63,7 @@ int sensorCount = 0;
     }
     
     else if (sensorCount == 1){
-        
+        //GOOGLE CALENDAR GOES HERE
         NSString *eventURL = @"http://translate.google.com/translate_tts?ie=UTF-8&q=Um,%20are%20you%20sure%20you%20want%20to%20do%20that?&tl=en-us";
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:eventURL, [[NSBundle mainBundle] resourcePath]]];
         NSError *error;
@@ -116,16 +116,6 @@ int sensorCount = 0;
 
 - (void) alarm
 {
-    //Lamp
-    unsigned char toSend = 'L';
-    NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
-    [bleShield write:data];
-    
-    //Mister
-    toSend = 'S';
-    data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
-    [bleShield write:data];
-    
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:@"ontop"
                                          ofType:@"mp3"]];
@@ -133,8 +123,38 @@ int sensorCount = 0;
                   initWithContentsOfURL:url
                   error:nil];
     [self.Audio play];
+    [NSTimer scheduledTimerWithTimeInterval:10.0f
+                                     target:self selector:@selector(lamp:) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:20.0f
+                                     target:self selector:@selector(lampFlicker:) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:30.0f
+                                     target:self selector:@selector(mister:) userInfo:nil repeats:NO];
+}
+
+- (void) lamp
+{
+    //Lamp
+    unsigned char toSend = 'O';
+    NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+    [bleShield write:data];
 
 }
+
+- (void) lampFlicker
+{
+    unsigned char toSend = 'L';
+    NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+    [bleShield write:data];
+}
+
+- (void) mister
+{
+    //Lamp
+    unsigned char toSend = 'S';
+    NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+    [bleShield write:data];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
