@@ -18,6 +18,50 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    bleShield = [[BLE alloc] init];
+    [bleShield controlSetup];
+    bleShield.delegate = self;
+    
+    [self BLEShieldScan];
+}
+
+- (void)BLEShieldScan
+{
+    if (bleShield.activePeripheral)
+        if(bleShield.activePeripheral.state == CBPeripheralStateConnected)
+        {
+            [[bleShield CM] cancelPeripheralConnection:[bleShield activePeripheral]];
+            return;
+        }
+    
+    if (bleShield.peripherals)
+        bleShield.peripherals = nil;
+    
+    [bleShield findBLEPeripherals:3];
+    
+    [NSTimer scheduledTimerWithTimeInterval:(float)3.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
+    
+}
+
+// Called when scan period is over to connect to the first found peripheral
+-(void) connectionTimer:(NSTimer *)timer
+{
+    if(bleShield.peripherals.count > 0)
+    {
+        [bleShield connectPeripheral:[bleShield.peripherals objectAtIndex:0]];
+    }
+    else
+    {
+    }
+}
+
+-(void) bleDidConnect
+{
+}
+
+- (void) bleDidDisconnect
+{
 }
 
 - (void)didReceiveMemoryWarning
