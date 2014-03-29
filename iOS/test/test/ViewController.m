@@ -21,12 +21,13 @@
 @implementation ViewController
 
 
-GTLCalendarCalendarList *calendarList;
+/*GTLCalendarCalendarList *calendarList;
 NSError *calendarListFetchError;
 GTLServiceTicket *calendarListTicket;
 GTLCalendarEvents *events;
 GTLServiceTicket *eventsTicket;
-NSError *eventsFetchError;
+NSError *eventsFetchError;*/
+NSString *ret;
 GTMOAuth2Authentication *auth;
 
 
@@ -38,7 +39,6 @@ GTMOAuth2Authentication *auth;
     NSString *urlStr = @"https://www.googleapis.com/calendar/v3/calendars/countableirrationals%40gmail.com/events?";
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
     [request setHTTPMethod:@"GET"];
-    __block NSMutableString *outp;
     [auth authorizeRequest:request
               completionHandler:^(NSError *error) {
                   NSString *output = nil;
@@ -56,15 +56,15 @@ GTMOAuth2Authentication *auth;
                           output = [[NSString alloc] initWithData:data
                                                           encoding:NSUTF8StringEncoding] ;
                           NSLog(@"output:%@",output);
-                          outp = output;
+                          ret = output;
                           
                       } else {
                           // fetch failed
-                          output = [error description];
+                          ret = [output copy];
                       }
                   }
               }];
-    return outp;
+    return ret;
 }
 
 - (NSData*) stringToData:(NSString*) calendar_info
@@ -91,30 +91,9 @@ GTMOAuth2Authentication *auth;
     {
         NSString *summary = [event objectForKey:@"summary"];
         [full_summary addObject: summary];
-        NSLog(@"Please work!");
     }
     return full_summary; // Returns summary of strings
 }
-
-/*- (NSMutableArray*) jSon_to_eventArray:(NSDictionary *)calendar_info
-{
-    //create an empty string array
-    NSMutableArray *item_array= [NSMutableArray array];
-    NSMutableArray *event_array= [NSMutableArray array];
-    //loop through events in JSON
-    NSLog(@"is this getting here");
-    for (NSDictionary* event in calendar_info){
-        NSArray *item= [event objectForKey:@"items"];
-        [item_array addObject:item];
-        NSLog(@"Everything is error!");
-        NSLog(item);
-    }
-    NSLog(@"how about here?");
-    //for each event, add the string under even summary to the array
-    //return the array
-    return (event_array);
-    
-} */
 
 - (void) setup
 {
