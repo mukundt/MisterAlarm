@@ -21,6 +21,7 @@
 		61583D3518E6667200234E27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61583D1718E6667200234E27 /* UIKit.framework */; };
 		61583D3D18E6667200234E27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61583D3B18E6667200234E27 /* InfoPlist.strings */; };
 		61583D3F18E6667200234E27 /* Mister_AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61583D3E18E6667200234E27 /* Mister_AlarmTests.m */; };
+		7A1DAC3F18E66E0E00485EE7 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DAC3D18E66E0E00485EE7 /* BLE.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		61583D3A18E6667200234E27 /* Mister AlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mister AlarmTests-Info.plist"; sourceTree = "<group>"; };
 		61583D3C18E6667200234E27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61583D3E18E6667200234E27 /* Mister_AlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mister_AlarmTests.m; sourceTree = "<group>"; };
+		7A1DAC3C18E66E0E00485EE7 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		7A1DAC3D18E66E0E00485EE7 /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		7A1DAC3E18E66E0E00485EE7 /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,10 +150,21 @@
 		61583D3918E6667200234E27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7A1DAC3B18E66E0E00485EE7 /* BLE */,
 				61583D3A18E6667200234E27 /* Mister AlarmTests-Info.plist */,
 				61583D3B18E6667200234E27 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7A1DAC3B18E66E0E00485EE7 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DAC3C18E66E0E00485EE7 /* BLE.h */,
+				7A1DAC3D18E66E0E00485EE7 /* BLE.m */,
+				7A1DAC3E18E66E0E00485EE7 /* BLEDefines.h */,
+			);
+			path = BLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61583D3F18E6667200234E27 /* Mister_AlarmTests.m in Sources */,
+				7A1DAC3F18E66E0E00485EE7 /* BLE.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +474,7 @@
 				61583D4418E6667200234E27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61583D4518E6667200234E27 /* Build configuration list for PBXNativeTarget "Mister AlarmTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +483,7 @@
 				61583D4718E6667200234E27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
