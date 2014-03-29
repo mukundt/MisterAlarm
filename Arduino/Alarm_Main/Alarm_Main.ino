@@ -151,7 +151,7 @@ void lamp_cont()
   if (lamp) 
   {
     digitalWrite(PIN_LAMP, HIGH);
-    Serial.pri
+    
   }
 }
 
