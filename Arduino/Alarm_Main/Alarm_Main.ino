@@ -1,6 +1,9 @@
-//#include "ble_shield.h"
+#include <boards.h>
+#include <ble_shield.h>
+#include <services.h>
 
 const int pingPin = 7;
+boolean check = false;
 
 void setup() {
   Serial.begin(9600);
@@ -22,5 +25,15 @@ void loop()
   
   cm = duration / 29 /2;
   
-  Serial.println(cm);
+  delay(150);
+  if (cm < 40){
+    check = true;
+  }
+  else {
+    check = false;
+  }
+  if (check){
+    Serial.println("HI MUKUND");
+  }
+
 }
