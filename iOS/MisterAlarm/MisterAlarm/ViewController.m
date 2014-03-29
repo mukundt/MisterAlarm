@@ -127,10 +127,6 @@ bool run = true;
     [self.Audio play];
     [NSTimer scheduledTimerWithTimeInterval:10.0f
                                      target:self selector:@selector(lamp:) userInfo:nil repeats:NO];
-    [NSTimer scheduledTimerWithTimeInterval:20.0f
-                                     target:self selector:@selector(lampFlicker:) userInfo:nil repeats:NO];
-    [NSTimer scheduledTimerWithTimeInterval:30.0f
-                                     target:self selector:@selector(mister:) userInfo:nil repeats:NO];
 }
 
 - (void) lamp:(id)sender
@@ -142,6 +138,8 @@ bool run = true;
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
     }
+    [NSTimer scheduledTimerWithTimeInterval:10.0f
+                                     target:self selector:@selector(lampFlicker:) userInfo:nil repeats:NO];
 
 }
 
@@ -153,16 +151,19 @@ bool run = true;
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
     }
+    [NSTimer scheduledTimerWithTimeInterval:10.0f
+                                     target:self selector:@selector(mister:) userInfo:nil repeats:NO];
 
 }
 
 - (void) mister:(id)sender
 {
-    if (run){
+
     //Lamp
     unsigned char toSend = 'S';
     NSLog(@"S");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+    if (run){
     [bleShield write:data];
     }
 }
