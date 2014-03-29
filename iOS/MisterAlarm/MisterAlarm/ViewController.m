@@ -15,6 +15,7 @@
 @implementation ViewController
 
 int sensorCount = 0;
+bool run = true;
 
 - (void)viewDidLoad
 {
@@ -54,58 +55,46 @@ int sensorCount = 0;
 
 - (void) restart:(id) sender
 {
-    unsigned char toSend = 'C';
     NSLog(@"C");
-    NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
-    [bleShield write:data];
-    [self.Audio play];
+    run = true;
+    [self alarm];
 }
 
 -(void) bleDidReceiveData:(unsigned char *)data length:(int)length
 {
+    NSData *d = [NSData dataWithBytes:data length: length];
+    NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
+    NSLog(s);
     
-    if (sensorCount == 0){
-        unsigned char toSend = 'B';
-        NSLog(@"B");
-        NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
-        [bleShield write:data];
-        [self.Audio pause];
-        [NSTimer scheduledTimerWithTimeInterval:7.0f
+        if (sensorCount == 0){
+            unsigned char toSend = 'B';
+            NSLog(@"B");
+            run = false;
+            NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+            [bleShield write:data];
+            [self.Audio pause];
+            //[NSThread sleepForTimeInterval:4.0f];
+            [NSTimer scheduledTimerWithTimeInterval:7.0f
                                          target:self selector:@selector(restart:) userInfo:nil repeats:NO];
-        sensorCount++;
-    }
+            sensorCount++;
+        }
     
-    else if (sensorCount == 1){
-        //GOOGLE CALENDAR GOES HERE
-        NSString *eventURL = @"http://translate.google.com/translate_tts?ie=UTF-8&q=Um,%20are%20you%20sure%20you%20want%20to%20do%20that?&tl=en-us";
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:eventURL, [[NSBundle mainBundle] resourcePath]]];
-        NSError *error;
-        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-        audioPlayer.numberOfLoops = 1;
-        
-        if (audioPlayer == nil)
-            NSLog([error description]);
-        else
-            [audioPlayer play];
-        sensorCount++;
-    }
+        else if (sensorCount == 1){
+            [self.Audio pause];
+            //CALLING CALENDAR FUNCTION HERE
+            [self.Audio play];
+            sensorCount++;
+        }
     
-    else if (sensorCount == 2){
-        NSString *eventURL = @"http://translate.google.com/translate_tts?ie=UTF-8&q=We%20wanred%20you.&tl=en-us";
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:eventURL, [[NSBundle mainBundle] resourcePath]]];
-        NSError *error;
-        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-        audioPlayer.numberOfLoops = 1;
-
-        [audioPlayer play];
-        //Horn
-        unsigned char toSend = 'H';
-        NSLog(@"H");
-        NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
-        [bleShield write:data];
-        sensorCount = 0;
-        //end demo here?
-    }
+        else if (sensorCount == 2){
+            //Horn
+            unsigned char toSend = 'H';
+            NSLog(@"H");
+            NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+            [bleShield write:data];
+            sensorCount = 0;
+            //end demo here?
+        }
     
 }
 
@@ -121,7 +110,7 @@ int sensorCount = 0;
 
 -(IBAction)alarmClick:(id)sender
 {
-    [self.alarm setImage:[UIImage imageNamed:@"alarm-clock-click.png"] forState:UIControlStateNormal];
+    [self.Alarm setImage:[UIImage imageNamed:@"alarm-clock-click.png"] forState:UIControlStateNormal];
     [self alarm];
     
 }
@@ -145,26 +134,36 @@ int sensorCount = 0;
 
 - (void) lamp:(id)sender
 {
+    if (run){
     //Lamp
     unsigned char toSend = 'O';
+    NSLog(@"O");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
+    }
 
 }
 
 - (void) lampFlicker:(id)sender
 {
+    if (run){
     unsigned char toSend = 'L';
+    NSLog(@"L");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
+    }
+
 }
 
 - (void) mister:(id)sender
 {
+    if (run){
     //Lamp
     unsigned char toSend = 'S';
+    NSLog(@"S");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
+    }
 }
 
 

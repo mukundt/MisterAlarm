@@ -15,7 +15,7 @@
     BLE *bleShield;
 }
 @property (weak, nonatomic) IBOutlet UIButton *buttonConnect;
-@property (weak, nonatomic) IBOutlet UIButton *alarm;
+@property (weak, nonatomic) IBOutlet UIButton *Alarm;
 @property (strong, nonatomic) AVAudioPlayer *Audio;
 
 
