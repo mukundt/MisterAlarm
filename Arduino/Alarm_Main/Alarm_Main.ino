@@ -1,4 +1,5 @@
-#define PIN_SENSOR 7
+#define PIN_SENSOR 2
+#define PIN_RELAY 5
 
 #include <SPI.h>
 #include <boards.h>
@@ -10,14 +11,33 @@ boolean prevcheck = false;
 int dur = 0;
 
 void setup() {
-  //ble_begin();
-  Serial.begin(9600);
+  ble_begin();
+  pinMode(PIN_RELAY, OUTPUT);
+
 }
 
 void loop()
 {
-  long duration, cm;
+  while (ble_available())
+  {
+    char command = (char)ble_read();
+    switch (command)
+    {
+      case 'f': //CHANGE BACK TO 'r'
+        flipLamp(); 
+        break;
+      default: 
+        break;
+    }
+  }
+  sonarSensor();
   
+  ble_do_events();
+}
+
+void sonarSensor()
+{
+  long duration, cm;
   pinMode(PIN_SENSOR, OUTPUT);
   digitalWrite(PIN_SENSOR, LOW);
   delayMicroseconds(2);
@@ -40,8 +60,17 @@ void loop()
     dur = 0;
   }
   if (check && !prevcheck){
-    //ble_write('c');
-    Serial.println("HI MUKUND");
+    ble_write('s');
   }
+}
 
+void flipLamp()
+{
+  for (int i = 0; i < 10; i++)
+  {
+    digitalWrite(PIN_RELAY, HIGH);
+    delay(250);
+    digitalWrite(PIN_RELAY, LOW);
+    delay(250);
+  }
 }
