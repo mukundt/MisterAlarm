@@ -73,19 +73,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSMutableArray*) getCalendarEvents
-{
-    
-    /* returns array of strings with calendar events for the day */
-    //NSMutableArray* all_events = [NSMutableArray arrayWithObjects: nil];
-    //NSDictionary* events = service.events().list(calendarId="countableirrationals@gmail.com", orderBy="startTime", singleEvents=true).execute();
-    //NSArray* items = [events objectForKey:@"items"];
-    //for (NSDictionary *item in items)
-    //{
-    //    NSString* single_event = [item objectForKey:@"summary"]; /* extract name of event */
-    //    [all_events addObject:single_event]; /* add it to the list of events */
-    //}
-    //return all_events;
-}
+
 
 @end
