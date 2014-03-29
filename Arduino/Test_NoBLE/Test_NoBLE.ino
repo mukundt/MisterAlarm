@@ -1,7 +1,3 @@
-#include <SPI.h>
-#include <boards.h>
-#include <ble_shield.h>
-#include <services.h>
 #include <Servo.h> 
 
 // INPUTS
@@ -44,7 +40,7 @@ boolean hand_detected = false;
 boolean prev_hand_detected = false;
 
 void setup() {
-  ble_begin();
+  Serial.begin(9600);
   pinMode(PIN_LAMP, OUTPUT);
   pinMode(PIN_HORN, OUTPUT);
   // sonar pin mode is set later on
@@ -59,15 +55,14 @@ void loop()
   mist_do_events();
   horn_do_events();
   check_sonar();
-  ble_do_events();
 }
 
 // reads all bytes in the serial input buffer, sets flags and timers accordingly
 void process_bluetooth_buffer() 
 {
-  while (ble_available())
+  while (Serial.available())
   {
-    char command = (char)ble_read();
+    char command = (char)Serial.read();
     switch (command)
     {
       case 'L': // lamp
@@ -94,6 +89,7 @@ void check_sonar()
   if (millis() - last_check_time > SONAR_CHECK_INTERVAL) { // it's time to check the sonar again! :D
     last_check_time = millis();
     // send a pulse
+    long duration, cm;
     pinMode(PIN_SONAR, OUTPUT);
     digitalWrite(PIN_SONAR, LOW);
     delayMicroseconds(2);
@@ -103,10 +99,10 @@ void check_sonar()
     
     // read the output pulse
     pinMode(PIN_SONAR, INPUT);
-    long duration = pulseIn(PIN_SONAR, 200000); // timeout after 0.2 seconds
+    duration = pulseIn(PIN_SONAR, HIGH); // timeout after 1 second
     
     // accomodate for the speed of sound (no big deal)
-    long cm = duration / 29 / 2;
+    cm = duration / 29 / 2;
     
     prev_hand_detected = hand_detected;
     if (cm < 40){
@@ -115,9 +111,11 @@ void check_sonar()
     else {
       hand_detected = false;
     }
-    if (hand_detected && !prev_hand_detected){
-      ble_write('S'); // snoz
+    if (hand_detected && !prev_hand_detected && (millis() - last_detection_time) > SONAR_DOWN_TIME){
+      Serial.write('S'); // snoz
+      last_detection_time = millis();
     }
+    
   }
 }
 
@@ -138,7 +136,7 @@ void mist_do_events()
 {
   if (!mist_on) return;
   if (millis() - mist_start_time < MIST_ON_TIME) {
-    float proportion = float(millis() - mist_start_time) / float(MIST_ON_TIME); // 0.0 to 1.0
+    float proportion = 1.0 - float(millis() - mist_start_time) / float(MIST_ON_TIME); // 0.0 to 1.0
     float range_motion = float(SERVO_RELEASED_POSITION - SERVO_SQUEEZED_POSITION);
     servo_position = int(range_motion * proportion + SERVO_SQUEEZED_POSITION);
   } else {
