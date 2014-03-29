@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -24,6 +24,9 @@
                                 <state key="normal" title="Connect">
                                     <color key="titleShadowColor" red="0.42242233797746598" green="0.63198021303398444" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="BLEShieldScan:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LAn-Bz-IIf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW1-mJ-PeV">
                                 <rect key="frame" x="27" y="121" width="266" height="326"/>
@@ -42,7 +45,7 @@
                     </view>
                     <connections>
                         <outlet property="alarm" destination="GW1-mJ-PeV" id="ImY-4c-tss"/>
-                        <outlet property="buttonConnect" destination="cpK-Ud-0dk" id="hfu-gD-wL7"/>
+                        <outlet property="buttonConnect" destination="cpK-Ud-0dk" id="wQV-e7-uqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

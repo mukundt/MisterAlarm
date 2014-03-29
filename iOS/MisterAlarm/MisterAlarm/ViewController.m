@@ -70,10 +70,7 @@ int sensorCount = 0;
         AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
         audioPlayer.numberOfLoops = 1;
         
-        if (audioPlayer == nil)
-            NSLog([error description]);
-        else
-            [audioPlayer play];
+        [audioPlayer play];
         sensorCount++;
     }
     
@@ -83,11 +80,8 @@ int sensorCount = 0;
         NSError *error;
         AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
         audioPlayer.numberOfLoops = 1;
-        
-        if (audioPlayer == nil)
-            NSLog([error description]);
-        else
-            [audioPlayer play];
+
+        [audioPlayer play];
         //Horn
         unsigned char toSend = 'H';
         NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
@@ -114,7 +108,7 @@ int sensorCount = 0;
     
 }
 
-- (void) alarm
+-(void) alarm
 {
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:@"ontop"
@@ -131,7 +125,7 @@ int sensorCount = 0;
                                      target:self selector:@selector(mister:) userInfo:nil repeats:NO];
 }
 
-- (void) lamp
+- (void) lamp:(id)sender
 {
     //Lamp
     unsigned char toSend = 'O';
@@ -140,14 +134,14 @@ int sensorCount = 0;
 
 }
 
-- (void) lampFlicker
+- (void) lampFlicker:(id)sender
 {
     unsigned char toSend = 'L';
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
 }
 
-- (void) mister
+- (void) mister:(id)sender
 {
     //Lamp
     unsigned char toSend = 'S';
