@@ -56,7 +56,9 @@ int sensorCount = 0;
 {
     
     if (sensorCount == 0){
-        //pause
+        unsigned char toSend = 'B';
+        NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+        [bleShield write:data];
         sensorCount++;
     }
     
@@ -86,7 +88,6 @@ int sensorCount = 0;
             NSLog([error description]);
         else
             [audioPlayer play];
-        Sleep(1000);
         //Horn
         unsigned char toSend = 'H';
         NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];

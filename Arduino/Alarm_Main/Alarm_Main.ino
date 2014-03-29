@@ -92,6 +92,12 @@ void process_bluetooth_buffer()
         horn_on = true;
         horn_start_time = millis();
         break;
+      case 'B':
+        lamp_count = 0;
+        mist_count = 0;
+      case 'C':
+        lamp_count = 5;
+        mist_count = 5;
       default:
         break;
     }
@@ -141,7 +147,7 @@ void lamp_do_events()
     if (millis() - lamp_end_time > LAMP_ON_TIME)
     {
       lamp_on = true;
-      lamp_count--;
+      //lamp_count--;
       lamp_start_time = millis();
     }
   }
@@ -170,7 +176,7 @@ void mist_do_events()
      if (millis() - mist_end_time > MIST_ON_TIME)
     {
       mist_on = true;
-      mist_count--;
+      //mist_count--;
       mist_start_time = millis();
     }
   }
