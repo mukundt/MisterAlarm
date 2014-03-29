@@ -106,6 +106,7 @@ bool run = true;
 - (void) bleDidDisconnect
 {
     [self.buttonConnect setTitle:@"Connect" forState:UIControlStateNormal];
+    [self BLEShieldScan:nil];
 }
 
 -(IBAction)alarmClick:(id)sender
