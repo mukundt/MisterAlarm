@@ -8,9 +8,10 @@
 #define PIN_SONAR 2
 
 // OUTPUTS
-#define PIN_LAMP 5
-#define PIN_MIST 6
-#define PIN_HORN 7
+#define PIN_LAMP 17
+#define PIN_MIST 19
+#define PIN_HORNA 5
+#define PIN_HORNB 6
 
 // DURATIONS
 #define LAMP_ON_TIME 500  // milliseconds
@@ -55,10 +56,12 @@ boolean prev_hand_detected = false;
 void setup() {
   ble_begin();
   pinMode(PIN_LAMP, OUTPUT);
-  pinMode(PIN_HORN, OUTPUT);
+  pinMode(PIN_HORNA, OUTPUT);
+  pinMode(PIN_HORNB, OUTPUT);
   // sonar pin mode is set later on
   mist_servo.attach(PIN_MIST);
   mist_servo.write(servo_position);
+  Serial.begin(9600);
 }
 
 void loop()
@@ -69,7 +72,7 @@ void loop()
   mist_do_events();
   horn_do_events();
   check_sonar();
-  lamp_flick();
+  lamp_cont();
 }
 
 // reads all bytes in the serial input buffer, sets flags and timers accordingly
@@ -143,10 +146,13 @@ void check_sonar()
   }
 }
 
-void lamp_flick()
+void lamp_cont()
 {
-  if (!lamp) return;
-  digitalWrite(PIN_LAMP, HIGH);
+  if (lamp) 
+  {
+    digitalWrite(PIN_LAMP, HIGH);
+    Serial.pri
+  }
 }
 
 // reads flag and timer, turns lamp on/off accordingly
@@ -209,9 +215,11 @@ void horn_do_events()
 {
   if (!horn_on) return;
   if (millis() - horn_start_time < HORN_ON_TIME) {
-    digitalWrite(PIN_HORN, HIGH);
+    digitalWrite(PIN_HORNA, HIGH);
+    digitalWrite(PIN_HORNB, HIGH);
   } else {
-    digitalWrite(PIN_HORN, LOW);
+    digitalWrite(PIN_HORNA, LOW);
+    digitalWrite(PIN_HORNB, LOW);
     horn_on = false;
   }
 }
