@@ -119,6 +119,7 @@ int sensorCount = 0;
 -(IBAction)alarmClick:(id)sender
 {
     [self.alarm setImage:[UIImage imageNamed:@"alarm-clock-click.png"] forState:UIControlStateNormal];
+    [self alarm];
     
 }
 
