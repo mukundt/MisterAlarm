@@ -11,6 +11,7 @@
 #import "GTMHTTPFetcherLogging.h"
 #import "GTMOAuth2Authentication.h"
 #import "GTMOAuth2ViewControllerTouch.h"
+#import "AVFoundation/AVAudioPlayer.h"
 
 
 
@@ -32,7 +33,7 @@ GTMOAuth2Authentication *auth;
 
 
 
-- (void) getCalendarEvents
+- (NSString*) getCalendarEvents
 {
     
     NSString *urlStr = @"https://www.googleapis.com/calendar/v3/calendars/countableirrationals%40gmail.com/events?";
@@ -67,6 +68,13 @@ GTMOAuth2Authentication *auth;
                   }
                   
               }];
+    
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    //data =nil;
+    
+    NSArray *jsonArray = [responseString JSONValue];
+    
+    return output;
 
 }
 
@@ -90,6 +98,7 @@ GTMOAuth2Authentication *auth;
     [[self navigationController] pushViewController:viewController animated:YES];
 }
 
+
 - (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
       finishedWithAuth:(GTMOAuth2Authentication *)Auth
                  error:(NSError *)error {
@@ -101,8 +110,61 @@ GTMOAuth2Authentication *auth;
 
         
     }
-    [self getCalendarEvents];
+    [self jSon_to_eventArray:[self getCalendarEvents]];
 }
+
+
+
+- (NSMutableArray*)jSon_to_eventArray:(NSString *)calendar_info
+{
+    //create an empty string array
+    NSMutableArray *item_array= [NSMutableArray array];
+    NSMutableArray *event_array= [NSMutableArray array];
+    //loop through events in JSON
+    for (NSDictionary* event in calendar_info){
+        NSString *item= @"items";
+        [item_array addObject:item];
+        NSLog(item);
+    }
+    //for each event, add the string under even summary to the array
+    //return the array
+    return (event_array);
+    
+}
+
+AVAudioPlayer *audioPlayer;
+
+
+- (void)textToSpeech:(NSMutableArray *)event_array
+{
+    for (NSString* event_str in event_array){
+        NSString *eventURL = @"http://translate.google.com/translate_tts?ie=UTF-8&q=word&tl=en-us";
+        eventURL=[eventURL stringByReplacingOccurrencesOfString:@"word"withString:event_str];
+        
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:eventURL, [[NSBundle mainBundle] resourcePath]]];
+        
+        NSError *error;
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        audioPlayer.numberOfLoops = -1;
+        
+        if (audioPlayer == nil)
+            NSLog([error description]);
+        else 
+            [audioPlayer play];
+        
+        /*NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                             pathForResource:@"TestSound"
+                                             ofType:@"m4a"]];
+        self.Audio = [[AVAudioPlayer alloc]
+                      initWithContentsOfURL:url
+                      error:nil];
+        [self.Audio play];*/
+        
+        /*AVPlayer *player = [[AVPlayer playerWithURL:[NSURL  URLWithString:@URL]] retain];
+        [player play];*/
+    }
+}
+
 
 - (void)viewDidLoad
 {
