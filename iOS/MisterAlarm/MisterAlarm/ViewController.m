@@ -52,6 +52,14 @@ int sensorCount = 0;
     }
 }
 
+- (void) restart:(id) sender
+{
+    unsigned char toSend = 'C';
+    NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+    [bleShield write:data];
+    [self.Audio play];
+}
+
 -(void) bleDidReceiveData:(unsigned char *)data length:(int)length
 {
     
@@ -59,6 +67,9 @@ int sensorCount = 0;
         unsigned char toSend = 'B';
         NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
         [bleShield write:data];
+        [self.Audio pause];
+        [NSTimer scheduledTimerWithTimeInterval:7.0f
+                                         target:self selector:@selector(restart:) userInfo:nil repeats:NO];
         sensorCount++;
     }
     
@@ -70,7 +81,10 @@ int sensorCount = 0;
         AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
         audioPlayer.numberOfLoops = 1;
         
-        [audioPlayer play];
+        if (audioPlayer == nil)
+            NSLog([error description]);
+        else
+            [audioPlayer play];
         sensorCount++;
     }
     
@@ -119,9 +133,9 @@ int sensorCount = 0;
     [self.Audio play];
     [NSTimer scheduledTimerWithTimeInterval:10.0f
                                      target:self selector:@selector(lamp:) userInfo:nil repeats:NO];
-    [NSTimer scheduledTimerWithTimeInterval:20.0f
+    [NSTimer scheduledTimerWithTimeInterval:10.0f
                                      target:self selector:@selector(lampFlicker:) userInfo:nil repeats:NO];
-    [NSTimer scheduledTimerWithTimeInterval:30.0f
+    [NSTimer scheduledTimerWithTimeInterval:10.0f
                                      target:self selector:@selector(mister:) userInfo:nil repeats:NO];
 }
 
