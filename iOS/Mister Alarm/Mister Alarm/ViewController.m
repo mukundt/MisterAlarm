@@ -44,6 +44,7 @@
     
 }
 
+
 // Called when scan period is over to connect to the first found peripheral
 -(void) connectionTimer:(NSTimer *)timer
 {
@@ -54,6 +55,12 @@
     else
     {
     }
+}
+
+-(void) bleDidReceiveData:(unsigned char *)data length:(int)length
+{
+    NSData *d = [NSData dataWithBytes:data length:length];
+    NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
 }
 
 -(void) bleDidConnect
