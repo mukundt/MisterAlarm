@@ -137,9 +137,9 @@ int sensorCount = 0;
     [self.Audio play];
     [NSTimer scheduledTimerWithTimeInterval:10.0f
                                      target:self selector:@selector(lamp:) userInfo:nil repeats:NO];
-    [NSTimer scheduledTimerWithTimeInterval:10.0f
+    [NSTimer scheduledTimerWithTimeInterval:20.0f
                                      target:self selector:@selector(lampFlicker:) userInfo:nil repeats:NO];
-    [NSTimer scheduledTimerWithTimeInterval:10.0f
+    [NSTimer scheduledTimerWithTimeInterval:30.0f
                                      target:self selector:@selector(mister:) userInfo:nil repeats:NO];
 }
 
@@ -147,7 +147,6 @@ int sensorCount = 0;
 {
     //Lamp
     unsigned char toSend = 'O';
-    NSLog(@"O");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
 
@@ -156,7 +155,6 @@ int sensorCount = 0;
 - (void) lampFlicker:(id)sender
 {
     unsigned char toSend = 'L';
-    NSLog(@"L");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
 }
@@ -165,7 +163,6 @@ int sensorCount = 0;
 {
     //Lamp
     unsigned char toSend = 'S';
-    NSLog(@"S");
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
 }
