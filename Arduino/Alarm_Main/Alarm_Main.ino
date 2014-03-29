@@ -1,4 +1,4 @@
-#define PIN_SENSOR 7
+#define PIN_SENSOR 2
 #define PIN_RELAY 5
 
 #include <SPI.h>
