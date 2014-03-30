@@ -29,6 +29,8 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>227252847475410</string>
+		<string>Mister Alarm</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

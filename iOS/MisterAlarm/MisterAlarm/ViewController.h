@@ -10,13 +10,21 @@
 #import "BLE.h"
 #import "AVFoundation/AVAudioPlayer.h"
 #import <AVFoundation/AVPlayer.h>
+#import "GTLCalendar.h"
+#import <Slt/Slt.h>
+#import <OpenEars/FliteController.h>
 
 @interface ViewController : UIViewController <BLEDelegate> {
     BLE *bleShield;
+    FliteController *fliteController;
+    Slt *slt;
 }
 @property (weak, nonatomic) IBOutlet UIButton *buttonConnect;
 @property (weak, nonatomic) IBOutlet UIButton *Alarm;
 @property (strong, nonatomic) AVAudioPlayer *Audio;
+
+@property (strong, nonatomic) FliteController *fliteController;
+@property (strong, nonatomic) Slt *slt;
 
 
 @end
