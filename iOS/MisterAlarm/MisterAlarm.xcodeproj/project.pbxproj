@@ -795,9 +795,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				94FFBF9218E7AF5B0063CA8F /* launch.png in Resources */,
 =======
 =======
+=======
+>>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
 =======
 >>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
 				7AC1BC2018E7D8E700D7255F /* STTwitterDemoIOS-Info.plist in Resources */,
@@ -807,6 +810,9 @@
 				7AC1BC1A18E7D8E700D7255F /* README.txt in Resources */,
 				7AC1BC2C18E7D8E700D7255F /* STConsoleVC.xib in Resources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
+=======
 >>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
 =======
 >>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
@@ -821,11 +827,15 @@
 				7AC1BC2F18E7D8E700D7255F /* README.md in Resources */,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 21e8b27641bc579dc0b18bda7a55e029b4a56c9a
 				94741D0C18E739F300753422 /* Images.xcassets in Resources */,
 				94FFBF9418E7AF5B0063CA8F /* logo.png in Resources */,
 >>>>>>> a4c55c843a369b13b50a3ccef128e8a47151a693
+=======
+				7AC1BC1C18E7D8E700D7255F /* InfoPlist.strings in Resources */,
+>>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
 =======
 				7AC1BC1C18E7D8E700D7255F /* InfoPlist.strings in Resources */,
 >>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
@@ -851,7 +861,11 @@
 				94741D0718E739F300753422 /* Main.storyboard in Resources */,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				94FFBF9318E7AF5B0063CA8F /* logo-big.png in Resources */,
+=======
+				7AC1BC2418E7D8E700D7255F /* MainMenu.xib in Resources */,
+>>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
 =======
 				7AC1BC2418E7D8E700D7255F /* MainMenu.xib in Resources */,
 >>>>>>> parent of 1a59741... ADDED TWITTER SUPPORT (TESTED)
