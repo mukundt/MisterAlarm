@@ -15,6 +15,10 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>logo</string>
+<<<<<<< HEAD
+=======
+				<string>logo-big</string>
+>>>>>>> a4c55c843a369b13b50a3ccef128e8a47151a693
 			</array>
 		</dict>
 	</dict>
@@ -44,13 +48,27 @@
 			<key>UILaunchImageOrientation</key>
 			<string>Portrait</string>
 			<key>UILaunchImageSize</key>
+<<<<<<< HEAD
 			<string>{320, 480}</string>
+=======
+			<string>{320, 568}</string>
+>>>>>>> a4c55c843a369b13b50a3ccef128e8a47151a693
 		</dict>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
+<<<<<<< HEAD
 	<array/>
+=======
+	<array>
+		<string>armv7</string>
+		<string>227252847475410</string>
+		<string>Mister Alarm</string>
+	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
+>>>>>>> a4c55c843a369b13b50a3ccef128e8a47151a693
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

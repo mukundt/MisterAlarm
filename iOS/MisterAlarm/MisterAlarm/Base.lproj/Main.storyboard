@@ -29,16 +29,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW1-mJ-PeV">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="402" width="136" height="166"/>
+=======
+                                <rect key="frame" x="34" y="446" width="80" height="102"/>
+>>>>>>> a4c55c843a369b13b50a3ccef128e8a47151a693
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="alarm-clock.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="alarm-clock-click.png"/>
                                 <connections>
-                                    <action selector="alarmClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vhq-oi-594"/>
+                                    <action selector="alarmClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KjN-RD-Vb3"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DH-MF-1Jj">
                                 <rect key="frame" x="75" y="198" width="170" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,14 +53,27 @@
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="sN7-g7-Rk4" appends="YES" id="Afp-Ba-4nY"/>
+=======
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPF-Or-pQL">
+                                <rect key="frame" x="50" y="221" width="220" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KqP-Ho-eB8" appends="YES" id="epK-OI-lZz"/>
+>>>>>>> a4c55c843a369b13b50a3ccef128e8a47151a693
                                 </connections>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
                     <connections>
                         <outlet property="Alarm" destination="GW1-mJ-PeV" id="7Sr-o0-yPv"/>
+<<<<<<< HEAD
                         <outlet property="bobsLabel" destination="4DH-MF-1Jj" id="g36-sv-CpI"/>
                         <outlet property="buttonConnect" destination="cpK-Ud-0dk" id="wQV-e7-uqU"/>
                         <outlet property="pgr" destination="sN7-g7-Rk4" id="e3o-Qs-xY1"/>
@@ -65,6 +83,17 @@
                 <panGestureRecognizer minimumNumberOfTouches="1" id="sN7-g7-Rk4">
                     <connections>
                         <action selector="labelDragged:" destination="vXZ-lx-hvc" id="EjA-ts-to3"/>
+=======
+                        <outlet property="bobsLabel" destination="sPF-Or-pQL" id="qZY-RA-qwH"/>
+                        <outlet property="buttonConnect" destination="cpK-Ud-0dk" id="wQV-e7-uqU"/>
+                        <outlet property="pgr" destination="KqP-Ho-eB8" id="oD8-w2-jIz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="KqP-Ho-eB8">
+                    <connections>
+                        <action selector="labelDragged:" destination="vXZ-lx-hvc" id="bat-jk-vZc"/>
+>>>>>>> a4c55c843a369b13b50a3ccef128e8a47151a693
                     </connections>
                 </panGestureRecognizer>
             </objects>
