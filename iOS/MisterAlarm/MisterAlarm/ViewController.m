@@ -92,7 +92,7 @@ bool login = true;
     
         else if (sensorCount == 1){
             [self.Audio pause];
-            //CALLING CALENDAR FUNCTION HERE
+            [self textToSpeech:[self getSummary:[self dataToDictionary:[self stringToData:[self getCalendarEvents]]]]];
             [self.Audio play];
             sensorCount++;
         }
@@ -272,9 +272,40 @@ NSString *ret; //for calendar extraction fxn
     [[self navigationController] pushViewController:viewController animated:YES];
 }
 
+- (NSMutableString*)combineString:(NSString*)event_array
+{
+    NSMutableString* all_events = @"Today, you have ";
+    for (NSString* event in event_array)
+    {
+        NSString *new_event = event;
+        all_events = [all_events stringByAppendingString:new_event];
+        all_events = [all_events stringByAppendingString:@" and "];
+        all_events = all_events.lowercaseString;
+        NSLog(all_events);
+        NSLog(@"ello");
+    }
+    all_events = [all_events stringByAppendingString:@" you better get a move on."];
+    return all_events;
+}
+
 - (void)textToSpeech:(NSMutableArray*)event_array
 {
-    fdasf
+    NSMutableString* combined_events = [self combineString: event_array];
+    [self.fliteController say:combined_events withVoice:self.slt];
+}
+
+- (FliteController *)fliteController {
+	if (fliteController == nil) {
+		fliteController = [[FliteController alloc] init];
+	}
+	return fliteController;
+}
+
+- (Slt *)slt {
+	if (slt == nil) {
+		slt = [[Slt alloc] init];
+	}
+	return slt;
 }
 
 
@@ -285,7 +316,6 @@ NSString *ret; //for calendar extraction fxn
         auth = Auth;
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-    [self textToSpeech:[self getSummary:[self dataToDictionary:[self stringToData:[self getCalendarEvents]]]]];
     //[self dismissViewControllerAnimated:YES completion:nil];
     [[self navigationController] popViewControllerAnimated:YES];
 }
