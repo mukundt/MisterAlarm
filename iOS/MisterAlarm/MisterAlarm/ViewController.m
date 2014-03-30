@@ -7,6 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "GTLUtilities.h"
+#import "GTMHTTPFetcherLogging.h"
+#import "GTMOAuth2Authentication.h"
+#import "GTMOAuth2ViewControllerTouch.h"
+#import "AVFoundation/AVAudioPlayer.h"
 
 @interface ViewController ()
 
@@ -14,8 +19,15 @@
 
 @implementation ViewController
 
+@synthesize fliteController;
+@synthesize slt;
+GTMOAuth2Authentication *auth;
+
+// HARDWARE IMPLEMENTATION //
+
 int sensorCount = 0;
 bool run = true;
+bool login = true;
 
 - (void)viewDidLoad
 {
@@ -64,7 +76,6 @@ bool run = true;
 {
     NSData *d = [NSData dataWithBytes:data length: length];
     NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
-    NSLog(s);
     
         if (sensorCount == 0){
             unsigned char toSend = 'B';
@@ -196,6 +207,119 @@ bool run = true;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// GOOGLE API IMPLEMENTATION //
+
+NSString *ret; //for calendar extraction fxn
+
+- (NSString*) getCalendarEvents
+{ // Returns json-formatted string of calendar events
+    
+    NSString *urlStr = @"https://www.googleapis.com/calendar/v3/calendars/countableirrationals%40gmail.com/events?";
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+    [request setHTTPMethod:@"GET"];
+    [auth authorizeRequest:request
+         completionHandler:^(NSError *error) {
+             NSString *output = nil;
+             if (error) {
+                 output = [error description];
+             } else {
+                 // Synchronous fetches like this are a really bad idea in Cocoa applications
+                 // For a very easy async alternative, we could use GTMHTTPFetcher
+                 NSURLResponse *response = nil;
+                 NSData *data = [NSURLConnection sendSynchronousRequest:request
+                                                      returningResponse:&response
+                                                                  error:&error];
+                 if (data) {
+                     // API fetch succeeded
+                     output = [[NSString alloc] initWithData:data
+                                                    encoding:NSUTF8StringEncoding] ;
+                     NSLog(@"output:%@",output);
+                     ret = output;
+                     
+                 } else {
+                     // fetch failed
+                     ret = [output copy];
+                 }
+             }
+         }];
+    return ret;
+}
+
+- (NSData*) stringToData:(NSString*) calendar_info
+{   // Converts json string format to data
+    NSData* data = [calendar_info dataUsingEncoding:NSUTF8StringEncoding];
+    return data;
+}
+
+- (NSDictionary*) dataToDictionary:(NSData*)calendar_info
+{
+    // Create NSDictionary from the JSON data
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:calendar_info options:0 error:nil];
+    return jsonDictionary;
+}
+
+- (NSMutableArray*) getSummary:(NSDictionary*)calendar_info
+{
+    // Returns array of events on calendar
+    NSMutableArray* full_summary = [[NSMutableArray alloc] init];
+    // Create array of dictionaries with key "items"
+    NSArray* all_events = [calendar_info objectForKey:@"items"];
+    // Create array of strings with key "summary";
+    for (NSDictionary *event in all_events)
+    {
+        NSString *summary = [event objectForKey:@"summary"];
+        [full_summary addObject: summary];
+    }
+    return full_summary; // Returns summary of strings
+}
+
+- (void) setup
+{
+    NSString *const kKeychainItemName = @"A100";
+    
+    NSString *clientID = @"56219686174-ac0e17o5elop5clqq7ctuep9f62b7t49.apps.googleusercontent.com";
+    NSString *clientSecret = @"LkFdefQl6d0u8MzG8oEnmUup";
+    
+    NSString *scope = @"https://www.googleapis.com/auth/calendar.readonly";
+    
+    GTMOAuth2ViewControllerTouch *viewController = [[GTMOAuth2ViewControllerTouch alloc] initWithScope:scope
+                                                                                              clientID:clientID
+                                                                                          clientSecret:clientSecret
+                                                                                      keychainItemName:kKeychainItemName
+                                                                                              delegate:self
+                                                                                      finishedSelector:@selector(viewController:finishedWithAuth:error:)];
+    
+    [self presentModalViewController:viewController animated:YES];
+    [[self navigationController] pushViewController:viewController animated:YES];
+}
+
+- (void)textToSpeech:(NSMutableArray*)event_array
+{
+    fdasf
+}
+
+
+- (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
+      finishedWithAuth:(GTMOAuth2Authentication *)Auth
+                 error:(NSError *)error {
+    if (error == nil) {
+        auth = Auth;
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    [self textToSpeech:[self getSummary:[self dataToDictionary:[self stringToData:[self getCalendarEvents]]]]];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [[self navigationController] popViewControllerAnimated:YES];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    if (login)
+    {
+        [self setup];
+        login = false;
+    }
 }
 
 @end
