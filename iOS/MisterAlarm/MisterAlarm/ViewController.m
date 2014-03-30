@@ -37,7 +37,6 @@ bool login = true;
     bleShield = [[BLE alloc] init];
     [bleShield controlSetup];
     bleShield.delegate = self;
-    
 }
 
 - (IBAction)BLEShieldScan:(id)sender
@@ -164,7 +163,6 @@ bool login = true;
 
 -(IBAction)alarmClick:(id)sender
 {
-    [self tweet];
     [self.Alarm setImage:[UIImage imageNamed:@"alarm-clock-click.png"] forState:UIControlStateNormal];
     [self alarm:nil];
     
@@ -367,8 +365,8 @@ NSString *ret; //for calendar extraction fxn
 {
     STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:@"ZbtI0TJ2xsoZXIEwXNpCbQ"
                                                           consumerSecret:@"xIO143J7ZywvlJJPdqZ2RZkZtCieMMCr0gNxej6hgw"
-                                                                oauthToken:@"56313119-2Lh0beBxMwQoU46n0dBNoBiEonyhDYc43T7wMumaY"
-                                        oauthTokenSecret:@"EpyGn9NGJBs4Sn4b7GhD4YI8yVJau3aGwzGvXJoqdYj5F"];
+                                                                username:@"woodenstick"
+                                                                password:@"mudgehouse"];
     
     [twitter postStatusUpdate:@"WEEEEE FIRST TWEET BABY #HACKPRINCETON2014"
             inReplyToStatusID:nil
@@ -378,9 +376,9 @@ NSString *ret; //for calendar extraction fxn
            displayCoordinates:nil
                      trimUser:nil
                  successBlock:^(NSDictionary *status) {
-                     NSLog(@"SUCCESS");
+                     // ...
                  } errorBlock:^(NSError *error) {
-                      NSLog(error);
+                     // ...
                  }];
     
 }
