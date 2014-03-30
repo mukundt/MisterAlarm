@@ -76,7 +76,6 @@ bool login = true;
 {
     NSData *d = [NSData dataWithBytes:data length: length];
     NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
-    NSLog(s);
     
         if (sensorCount == 0){
             unsigned char toSend = 'B';
@@ -275,51 +274,7 @@ NSString *ret; //for calendar extraction fxn
 
 - (void)textToSpeech:(NSMutableArray*)event_array
 {
-    for (NSString* event_str in event_array){
-        NSURL *url = [NSURL URLWithString:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"];
-        
-        //(optional) [player addObserver:self forKeyPath:@"s
-        /*NSString *eventURL = @"http://translate.google.com/translate_tts?ie=UTF-8&q=word&tl=en-us";
-         eventURL=[eventURL stringByReplacingOccurrencesOfString:@"word"withString:event_str];
-         eventURL= [eventURL lowercaseString];
-         eventURL=[eventURL stringByReplacingOccurrencesOfString:@" "withString:@"+"];
-         
-         NSString *eventURL = @"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
-         
-         NSURL *url = [NSURL URLWithString:eventURL];
-         NSData *data = [NSData dataWithContentsOfURL: url];
-         AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithData: data error: nil];
-         if (audioPlayer == nil) { NSLog(@"this is nil"); }
-         [audioPlayer play];
-         NSLog(@"did i get here");
-         
-         NSData* songFile = [[NSData alloc] initWithContentsOfURL:eventURL error: nil ];
-         self.audioPlayer = [[AVAudioPlayer alloc] initWithData:songFile error:nil];
-         NSError *error;
-         if (audioPlayer == nil) {
-         NSLog(@"is this nil");
-         NSLog([error description]); }
-         else {
-         [audioPlayer play];
-         } */
-        
-        /*
-         
-         audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-         
-         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:eventURL, [[NSBundle mainBundle] resourcePath]]];
-         
-         NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-         pathForResource:@"TestSound"
-         ofType:@"m4a"]];
-         self.Audio = [[AVAudioPlayer alloc]
-         initWithContentsOfURL:url
-         error:nil];
-         [self.Audio play];*/
-        
-        /*AVPlayer *player = [[AVPlayer playerWithURL:[NSURL  URLWithString:@URL]] retain];
-         [player play];*/
-    }
+    fdasf
 }
 
 
