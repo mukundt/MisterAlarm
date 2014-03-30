@@ -27,6 +27,7 @@ GTMOAuth2Authentication *auth;
 
 int sensorCount = 0;
 bool run = true;
+bool login = true;
 
 - (void)viewDidLoad
 {
@@ -325,16 +326,22 @@ NSString *ret; //for calendar extraction fxn
 - (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
       finishedWithAuth:(GTMOAuth2Authentication *)Auth
                  error:(NSError *)error {
-/*    if (error == nil) {
+    if (error == nil) {
         auth = Auth;
         [self dismissViewControllerAnimated:YES completion:nil];
-    }*/
+    }
     [self textToSpeech:[self getSummary:[self dataToDictionary:[self stringToData:[self getCalendarEvents]]]]];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
-    [self setup];
+    if (login)
+    {
+        [self setup];
+        login = false;
+    }
 }
 
 @end
