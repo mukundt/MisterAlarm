@@ -20,8 +20,8 @@ bool run = true;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     self.buttonConnect.layer.cornerRadius = 5.0f;
+    UIPanGestureRecognizer *pgr = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(updateImagePosition:)];
     bleShield = [[BLE alloc] init];
     [bleShield controlSetup];
     bleShield.delegate = self;
@@ -57,7 +57,7 @@ bool run = true;
 {
     NSLog(@"C");
     run = true;
-    [self alarm];
+    [self alarm:nil];
 }
 
 -(void) bleDidReceiveData:(unsigned char *)data length:(int)length
@@ -91,6 +91,8 @@ bool run = true;
             unsigned char toSend = 'H';
             NSLog(@"H");
             NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
+            run = false;
+            [self.Audio pause];
             [bleShield write:data];
             sensorCount = 0;
             //end demo here?
@@ -107,16 +109,37 @@ bool run = true;
 {
     [self.buttonConnect setTitle:@"Connect" forState:UIControlStateNormal];
     [self BLEShieldScan:nil];
+    run = true;
+    [NSTimer scheduledTimerWithTimeInterval:6.0f
+                                     target:self selector:@selector(alarm:) userInfo:nil repeats:NO];
+}
+
+- (IBAction) labelDragged:(UIPanGestureRecognizer *)recognizer
+{
+	UILabel *label = (UILabel *)recognizer.view;
+    CGPoint translation = [recognizer translationInView:self.view];
+    
+    int raw = MIN(MAX((translation.y + 200), 0), 400);
+    int hour = raw / 33;
+    int minute = raw % 33;
+    if (hour == 12) {
+        hour = 11;
+        minute = 59;
+    }
+    if (hour == 0) hour = 12;
+
+    NSString *myT = [NSString stringWithFormat:@"%d:%.2d", hour, minute];
+	[label setText:myT];
 }
 
 -(IBAction)alarmClick:(id)sender
 {
     [self.Alarm setImage:[UIImage imageNamed:@"alarm-clock-click.png"] forState:UIControlStateNormal];
-    [self alarm];
+    [self alarm:nil];
     
 }
 
--(void) alarm
+-(void) alarm:(id)sender
 {
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:@"ontop"
@@ -125,7 +148,7 @@ bool run = true;
                   initWithContentsOfURL:url
                   error:nil];
     [self.Audio play];
-    [NSTimer scheduledTimerWithTimeInterval:10.0f
+    [NSTimer scheduledTimerWithTimeInterval:6.0f
                                      target:self selector:@selector(lamp:) userInfo:nil repeats:NO];
 }
 
@@ -138,7 +161,7 @@ bool run = true;
     NSData *data = [NSData dataWithBytes: &toSend length: sizeof(toSend)];
     [bleShield write:data];
     }
-    [NSTimer scheduledTimerWithTimeInterval:10.0f
+    [NSTimer scheduledTimerWithTimeInterval:7.0f
                                      target:self selector:@selector(lampFlicker:) userInfo:nil repeats:NO];
 
 }

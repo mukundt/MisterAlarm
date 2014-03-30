@@ -13,10 +13,14 @@
 
 @interface ViewController : UIViewController <BLEDelegate> {
     BLE *bleShield;
+
 }
+
 @property (weak, nonatomic) IBOutlet UIButton *buttonConnect;
 @property (weak, nonatomic) IBOutlet UIButton *Alarm;
 @property (strong, nonatomic) AVAudioPlayer *Audio;
-
+@property (weak, nonatomic) IBOutlet UILabel *bobsLabel;
+@property (weak, nonatomic) IBOutlet UIPanGestureRecognizer *pgr;
+- (IBAction)labelDragged:(UIPanGestureRecognizer *)pgr;
 
 @end
