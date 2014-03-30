@@ -72,6 +72,24 @@ bool login = true;
     [self alarm];
 }
 
+- (IBAction) labelDragged:(UIPanGestureRecognizer *)recognizer
+{
+	UILabel *label = (UILabel *)recognizer.view;
+    CGPoint translation = [recognizer translationInView:self.view];
+    
+    int raw = MIN(MAX((translation.y + 200), 0), 400);
+    int hour = raw / 33;
+    int minute = raw % 33;
+    if (hour == 12) {
+        hour = 11;
+        minute = 59;
+    }
+    if (hour == 0) hour = 12;
+    
+    NSString *myT = [NSString stringWithFormat:@"%d:%.2d", hour, minute];
+	[label setText:myT];
+}
+
 -(void) bleDidReceiveData:(unsigned char *)data length:(int)length
 {
     NSData *d = [NSData dataWithBytes:data length: length];

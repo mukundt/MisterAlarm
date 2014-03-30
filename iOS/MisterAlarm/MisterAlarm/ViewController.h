@@ -26,5 +26,9 @@
 @property (strong, nonatomic) FliteController *fliteController;
 @property (strong, nonatomic) Slt *slt;
 
+@property (weak, nonatomic) IBOutlet UILabel *bobsLabel;
+@property (weak, nonatomic) IBOutlet UIPanGestureRecognizer *pgr;
+- (IBAction)labelDragged:(UIPanGestureRecognizer *)pgr;
+
 
 @end

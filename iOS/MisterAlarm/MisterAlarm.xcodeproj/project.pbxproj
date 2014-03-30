@@ -17,6 +17,8 @@
 		612979D818E7A469000C1422 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612979D718E7A469000C1422 /* AudioToolbox.framework */; };
 		612979DB18E7A538000C1422 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612979D918E7A538000C1422 /* OpenEars.framework */; };
 		612979DC18E7A538000C1422 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612979DA18E7A538000C1422 /* Slt.framework */; };
+		61FA87E118E7D32800BBEBA2 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 61FA87DF18E7D32800BBEBA2 /* launch.png */; };
+		61FA87E218E7D32800BBEBA2 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 61FA87E018E7D32800BBEBA2 /* logo.png */; };
 		94741CF418E739F200753422 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94741CF318E739F200753422 /* Foundation.framework */; };
 		94741CF618E739F200753422 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94741CF518E739F200753422 /* CoreGraphics.framework */; };
 		94741CF818E739F200753422 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94741CF718E739F200753422 /* UIKit.framework */; };
@@ -76,6 +78,8 @@
 		612979D718E7A469000C1422 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		612979D918E7A538000C1422 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		612979DA18E7A538000C1422 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		61FA87DF18E7D32800BBEBA2 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		61FA87E018E7D32800BBEBA2 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		94741CF018E739F200753422 /* MisterAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisterAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94741CF318E739F200753422 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94741CF518E739F200753422 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,6 +189,8 @@
 		94741CFA18E739F300753422 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61FA87DF18E7D32800BBEBA2 /* launch.png */,
+				61FA87E018E7D32800BBEBA2 /* logo.png */,
 				612975FE18E798EE000C1422 /* GTMOAuth2WindowController.h */,
 				612975FF18E798EE000C1422 /* GTMOAuth2ViewControllerTouch.h */,
 				6129760018E798EE000C1422 /* GTMOAuth2ViewTouch.xib */,
@@ -295,6 +301,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = A100;
 				TargetAttributes = {
+					94741CEF18E739F200753422 = {
+						DevelopmentTeam = 2P6XS46L68;
+					};
 					94741D1018E739F300753422 = {
 						TestTargetID = 94741CEF18E739F200753422;
 					};
@@ -326,10 +335,12 @@
 			files = (
 				6129761618E798EE000C1422 /* GTMOAuth2ViewTouch.xib in Resources */,
 				6129761518E798EE000C1422 /* GTMOAuth2ViewTouch.xib in Resources */,
+				61FA87E218E7D32800BBEBA2 /* logo.png in Resources */,
 				94741D0C18E739F300753422 /* Images.xcassets in Resources */,
 				94741D3418E741AD00753422 /* ontop.mp3 in Resources */,
 				94741D3218E73F1200753422 /* alarm-clock.png in Resources */,
 				94741D3118E73F1200753422 /* alarm-clock-click.png in Resources */,
+				61FA87E118E7D32800BBEBA2 /* launch.png in Resources */,
 				94741CFE18E739F300753422 /* InfoPlist.strings in Resources */,
 				6129761818E798EE000C1422 /* test-Info.plist in Resources */,
 				94741D0718E739F300753422 /* Main.storyboard in Resources */,
@@ -480,8 +491,8 @@
 		94741D2318E739F300753422 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -491,11 +502,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MisterAlarm/MisterAlarm-Prefix.pch";
 				INFOPLIST_FILE = "MisterAlarm/MisterAlarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -503,8 +517,8 @@
 		94741D2418E739F300753422 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -514,11 +528,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MisterAlarm/MisterAlarm-Prefix.pch";
 				INFOPLIST_FILE = "MisterAlarm/MisterAlarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
