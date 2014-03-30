@@ -16,7 +16,6 @@
 // DURATIONS
 #define LAMP_ON_TIME 100  // milliseconds, duration of a flash
 #define MIST_ON_TIME 800   // milliseconds, servo travel time
-#define HORN_ON_TIME 1000   // milliseconds, total honk duration
 #define SONAR_CHECK_INTERVAL 50 // milliseconds - DON'T POLL TOO MUCH---MESSES UP TIMING BIG TIME
 #define SONAR_DOWN_TIME 2000 // milliseconds
 
@@ -186,10 +185,11 @@ void horn_do_events()
     mist_servo.write(SERVO_RELEASED_POSITION);
     digitalWrite(PIN_HORNA, HIGH);
     digitalWrite(PIN_HORNB, HIGH);
-    delay(HORN_ON_TIME);
+    delay(1000);
     digitalWrite(PIN_HORNA, LOW);
     digitalWrite(PIN_HORNB, LOW);
     horn_on = false;
+    delay(6000);
   }
 }
 
