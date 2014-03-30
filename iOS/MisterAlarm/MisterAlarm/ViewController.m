@@ -338,6 +338,28 @@ NSString *ret; //for calendar extraction fxn
     [[self navigationController] popViewControllerAnimated:YES];
 }
 
+-(void) tweet
+{
+    STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey:@"ZbtI0TJ2xsoZXIEwXNpCbQ"
+                                                          consumerSecret:@"xIO143J7ZywvlJJPdqZ2RZkZtCieMMCr0gNxej6hgw"
+                                                                username:@"woodenstick"
+                                                                password:@"mudgehouse"];
+    
+    [twitter postStatusUpdate:@"WEEEEE FIRST TWEET BABY #HACKPRINCETON2014"
+            inReplyToStatusID:nil
+                     latitude:nil
+                    longitude:nil
+                      placeID:nil
+           displayCoordinates:nil
+                     trimUser:nil
+                 successBlock:^(NSDictionary *status) {
+                     // ...
+                 } errorBlock:^(NSError *error) {
+                     // ...
+                 }];
+    
+}
+
 - (void) viewDidAppear:(BOOL)animated
 {
     if (login)

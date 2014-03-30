@@ -13,6 +13,7 @@
 #import "GTLCalendar.h"
 #import <Slt/Slt.h>
 #import <OpenEars/FliteController.h>
+#import "STTwitter/STTwitter/STTwitter.h"
 
 @interface ViewController : UIViewController <BLEDelegate> {
     BLE *bleShield;
