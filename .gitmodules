@@ -1,0 +1,3 @@
+[submodule "iOS/MisterAlarm/MisterAlarm/STTwitter"]
+	path = iOS/MisterAlarm/MisterAlarm/STTwitter
+	url = https://github.com/mukundt/MisterAlarm
